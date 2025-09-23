@@ -1,4 +1,4 @@
-from django.db.models import TextField,CharField,FloatField,BooleanField,Model,ForeignKey,CASCADE, IntegerField, CompositePrimaryKey, DateTimeField, TextChoices, UniqueConstraint,SET_DEFAULT, TimeField
+from django.db.models import TextField,CharField,FloatField,BooleanField,Model,ForeignKey,CASCADE, IntegerField, CompositePrimaryKey, DateTimeField, TextChoices, UniqueConstraint,SET_DEFAULT, TimeField, AutoField
 
 
 
@@ -81,6 +81,7 @@ class AirlineAcceptance(Model):
         PENDING = "P" , "PENDING",
         ACCEPTED = 'A', "ACCEPTED",
         REJECTED = 'R', 'REJECTED'
+    state = CharField(choices=Status.choices,default='P')
 
 class Flight(Model):
     code = CharField(primary_key=True)
@@ -94,7 +95,8 @@ class Flight(Model):
     active = BooleanField(default=True)
 
 class FlightInstance(Model):
-    code = CharField(primary_key=True)
+    id = AutoField(primary_key=True)
+    code = CharField()
     source = ForeignKey(Airport,on_delete=SET_DEFAULT,default="NA",related_name='source_aiport_code_instance')
     destination = ForeignKey(Airport,on_delete=SET_DEFAULT,default="NA")
     arrival_time = DateTimeField()
@@ -104,12 +106,27 @@ class FlightInstance(Model):
     airline = ForeignKey(Airline,on_delete=SET_DEFAULT,default="NA")
     Aircraft = ForeignKey(Aircraft,on_delete=SET_DEFAULT,default="NA")
     domestic = BooleanField(default=True)
-    active = BooleanField(default=True)
-    gate = ForeignKey(AirportEntity,on_delete=SET_DEFAULT,default = None,related_name='source_aiport_gate_code')
-    baggage = ForeignKey(AirportEntity,on_delete=SET_DEFAULT,default = None)
-    take_off_runway = ForeignKey(Runway,on_delete=SET_DEFAULT,default = None,related_name='source_aiport_runway_code')
-    landing_runway = ForeignKey(Runway,on_delete=SET_DEFAULT,default = None)
-    approved = BooleanField(default = False)
+    gate = ForeignKey(AirportEntity,on_delete=SET_DEFAULT,default = None,null=True,related_name='source_aiport_gate_code')
+    baggage = ForeignKey(AirportEntity,on_delete=SET_DEFAULT,default = None,null=True,related_name='source_aiport_baggage_code')
+    take_off_runway = ForeignKey(Runway,on_delete=SET_DEFAULT,default = None,null=True,related_name='source_aiport_runway_code')
+    landing_runway = ForeignKey(Runway,on_delete=SET_DEFAULT,default = None,null=True,related_name='destination_aiport_runway_code')
+    class State (TextChoices):
+        PENDING = "P" , "PENDING",
+        ACCEPTED = 'A', "ACCEPTED",
+        REJECTED = 'R', 'REJECTED',
+        GATE = 'G', "GATE",
+        PUSHBACK = 'PU', "PUSHBACK",
+        TAXIOUT = 'TO', 'TAXIOUT',
+        TAKEOFF = 'T', 'TAKEOFF',
+        AIR = 'AI', 'AIR',
+        LANDING = 'L','LANDING',
+        TAXIIN = 'TI' , 'TAXIIN',
+        BAGGAGE = 'B' , 'BAGGAGE',
+        CLOSED = 'C', 'CLOSED'
+    state = CharField(
+        choices= State.choices,
+        default='P'
+    )
     created_at = DateTimeField(auto_now_add=True)
 
 

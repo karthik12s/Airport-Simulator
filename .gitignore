@@ -1,2 +1,4 @@
 /lib
 /lib64
+/airport
+*.pyc
