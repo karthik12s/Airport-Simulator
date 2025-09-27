@@ -7,6 +7,22 @@ class Entity(TextChoices):
     BAGGAGE = 'BG', 'BAGGAGE_BELT',
     GATE = 'GT', 'GATE'
     
+class FlightState (TextChoices):
+        PENDING = "P" , "PENDING",
+        ACCEPTED = 'A', "ACCEPTED",
+        REJECTED = 'R', 'REJECTED',
+        GATE = 'G', "GATE",
+        PUSHBACK = 'PU', "PUSHBACK",
+        TAXIOUT = 'TO', 'TAXIOUT',
+        TAKEOFF = 'T', 'TAKEOFF',
+        AIR = 'AI', 'AIR',
+        LANDING = 'L','LANDING',
+        TAXIIN = 'TI' , 'TAXIIN',
+        BAGGAGE = 'B' , 'BAGGAGE',
+        CLOSED = 'C', 'CLOSED',
+        CANCELLED = 'CA','CANCELLED',
+        DIVERTED = 'DIV' , 'DIVERTED',
+        INAPPROACH = 'AP','INAPPROACH'
 class Airport(Model):
     name = TextField()
     code = CharField(primary_key = True)
@@ -65,7 +81,7 @@ class AirportEntity(Model):
     capacity = IntegerField()
     free_at = DateTimeField(auto_now_add=True)
     terminal = ForeignKey(Terminal,on_delete=CASCADE)
-    
+    active = BooleanField(default=True)
     entity = CharField(
         choices=Entity.choices
     )
@@ -110,21 +126,9 @@ class FlightInstance(Model):
     baggage = ForeignKey(AirportEntity,on_delete=SET_DEFAULT,default = None,null=True,related_name='source_aiport_baggage_code')
     take_off_runway = ForeignKey(Runway,on_delete=SET_DEFAULT,default = None,null=True,related_name='source_aiport_runway_code')
     landing_runway = ForeignKey(Runway,on_delete=SET_DEFAULT,default = None,null=True,related_name='destination_aiport_runway_code')
-    class State (TextChoices):
-        PENDING = "P" , "PENDING",
-        ACCEPTED = 'A', "ACCEPTED",
-        REJECTED = 'R', 'REJECTED',
-        GATE = 'G', "GATE",
-        PUSHBACK = 'PU', "PUSHBACK",
-        TAXIOUT = 'TO', 'TAXIOUT',
-        TAKEOFF = 'T', 'TAKEOFF',
-        AIR = 'AI', 'AIR',
-        LANDING = 'L','LANDING',
-        TAXIIN = 'TI' , 'TAXIIN',
-        BAGGAGE = 'B' , 'BAGGAGE',
-        CLOSED = 'C', 'CLOSED'
+    
     state = CharField(
-        choices= State.choices,
+        choices= FlightState.choices,
         default='P'
     )
     created_at = DateTimeField(auto_now_add=True)
