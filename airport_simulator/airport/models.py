@@ -39,7 +39,7 @@ class Airline(Model):
     active = BooleanField(default = True)
 
 class Terminal(Model):
-    airport = ForeignKey(Airport,on_delete=CASCADE)
+    airport = ForeignKey(Airport,on_delete=CASCADE, related_name='terminals')
     code = CharField()
     active = BooleanField(default = True)
     capacity = IntegerField()
@@ -64,7 +64,7 @@ class Aircraft(Model):
 
 
 class Runway(Model):
-    airport = ForeignKey(Airport,on_delete=CASCADE)
+    airport = ForeignKey(Airport,on_delete=CASCADE, related_name='runways')
     length = IntegerField()
     material = CharField()
     free_at = DateTimeField(auto_now_add=True)
@@ -80,7 +80,7 @@ class AirportEntity(Model):
     code  = CharField()
     capacity = IntegerField()
     free_at = DateTimeField(auto_now_add=True)
-    terminal = ForeignKey(Terminal,on_delete=CASCADE)
+    terminal = ForeignKey(Terminal,on_delete=CASCADE, related_name='airport_entity')
     active = BooleanField(default=True)
     entity = CharField(
         choices=Entity.choices
