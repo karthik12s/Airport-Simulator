@@ -1,0 +1,18 @@
+Start Zookeper:
+
+>zookeeper-server-start.bat E:\kafka_2.13-3.9.1\config\zookeeper.properties
+
+Start kafka
+>kafka-server-start.bat  E:\kafka_2.13-3.9.1\config\server.properties
+
+Topic Creation
+
+>kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic airport
+
+Producer
+
+kafka-producer-perf-test.bat --broker-list localhost:9092 --topic airport
+
+Consumer
+
+>kafka-console-consumer.bat --topic airport --bootstrap-server localhost:9092 --from-beginning

@@ -8,6 +8,7 @@ import logging
 gate_repository = AirportEntityHandler()
 
 logger = logging.getLogger(__name__)
+logger.setLevel = logging.INFO
 
 # ---------- Time Calculator ----------
 class GateTimeCalculator:
@@ -18,7 +19,7 @@ class GateTimeCalculator:
         """
         Updates gate and flight timings when assigned.
         """
-        gate.free_at += timedelta(minutes=GateTimeCalculator.DEFAULT_OCCUPANCY)
+        gate.free_at = max(gate.free_at+timedelta(minutes=GateTimeCalculator.DEFAULT_OCCUPANCY),flight.departure_time) 
         flight.gate = gate
         flight.departure_time = gate.free_at
         flight.state = "G"
@@ -55,9 +56,10 @@ class GateScheduleService:
     def assign_gates(self, window_minutes=120):
         current_time = datetime.now(timezone.utc)
         comparison_time = current_time + timedelta(minutes=window_minutes)
-
+        print(comparison_time,current_time,datetime.now(timezone.utc))
         # fetch flights
         upcoming_flights = self.flight_repo.get_upcoming_flights(comparison_time)
+        print(upcoming_flights)
         logger.info("Upcoming flights: %d", len(upcoming_flights))
 
         # group by airport source

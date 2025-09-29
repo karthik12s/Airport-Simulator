@@ -1,4 +1,5 @@
 from django.db.models import TextField,CharField,FloatField,BooleanField,Model,ForeignKey,CASCADE, IntegerField, CompositePrimaryKey, DateTimeField, TextChoices, UniqueConstraint,SET_DEFAULT, TimeField, AutoField
+from django.utils import timezone
 
 
 
@@ -67,7 +68,7 @@ class Runway(Model):
     airport = ForeignKey(Airport,on_delete=CASCADE, related_name='runways')
     length = IntegerField()
     material = CharField()
-    free_at = DateTimeField(auto_now_add=True)
+    free_at = DateTimeField(default=timezone.now)
     number_1 = CharField()
     number_2 = CharField()
     active = BooleanField(default = True)
@@ -79,7 +80,7 @@ class Runway(Model):
 class AirportEntity(Model):
     code  = CharField()
     capacity = IntegerField()
-    free_at = DateTimeField(auto_now_add=True)
+    free_at = DateTimeField(default=timezone.now)
     terminal = ForeignKey(Terminal,on_delete=CASCADE, related_name='airport_entity')
     active = BooleanField(default=True)
     entity = CharField(
@@ -131,7 +132,7 @@ class FlightInstance(Model):
         choices= FlightState.choices,
         default='P'
     )
-    created_at = DateTimeField(auto_now_add=True)
+    created_at = DateTimeField(default=timezone.now)
 
 
 class AirportEntityLogging(Model):

@@ -1,6 +1,8 @@
 from ..models import Flight,FlightInstance
 from datetime import datetime,timezone,timedelta
+from ..services.kafka_service import KafkaService
 
+kafka_instance = KafkaService()
 
     
 class FlightTimeCalculator:
@@ -105,6 +107,7 @@ class FlightSchedulerService:
         for flight in new_flights:
             dep, arr = self.calculator.compute_times(flight, current_time)
             instances.append(FlightInstanceFactory.create_instance(flight, dep, arr))
+            kafka_instance.produce({"type":"departure_invoke","departure_time":dep.isoformat()})
 
         self.instance_repo.save_all(instances)
         return instances
