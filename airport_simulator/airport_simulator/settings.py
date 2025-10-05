@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'airport.apps.AirportConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -67,8 +68,16 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'airport_simulator.wsgi.application'
+# WSGI_APPLICATION = 'airport_simulator.wsgi.application'
 
+ASGI_APPLICATION = 'airport_simulator.asgi.application'
+
+
+CHANNEL_LAYERS = {
+    'default': {
+        "BACKEND": 'channels.layers.InMemoryChannelLayer',
+    }
+}
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases

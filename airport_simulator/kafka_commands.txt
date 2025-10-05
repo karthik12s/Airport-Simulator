@@ -11,7 +11,7 @@ Topic Creation
 
 Producer
 
-kafka-producer-perf-test.bat --broker-list localhost:9092 --topic airport
+kafka-console-producer.bat --broker-list localhost:9092 --topic airport
 
 Consumer
 

@@ -6,6 +6,23 @@
     <title>Airport Simulator</title>
 </head>
 <script>
+    const socket = new WebSocket('ws://127.0.0.1:8000/airport/socket'); 
+        socket.onopen = function(event) {
+        console.log('WebSocket connection opened:', event);
+        socket.send('Hello from client!'); // Send a message to the server
+    };
+
+    socket.onmessage = function(event) {
+        console.log('Message from server:', event.data);
+    };
+
+    socket.onerror = function(event) {
+        console.error('WebSocket error:', event);
+    };
+
+    socket.onclose = function(event) {
+        console.log('WebSocket connection closed:', event);
+    };
     fetch("/airports")
     .then(response => {
         if(!response.ok){

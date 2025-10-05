@@ -25,6 +25,6 @@ def my_scheduled_task():
 
 def start():
     scheduler = BackgroundScheduler()
-    scheduler.add_job(my_scheduled_task, "interval", seconds=5)  
+    scheduler.add_job(my_scheduled_task, "interval", seconds=300)  
     scheduler.start()
     return scheduler
