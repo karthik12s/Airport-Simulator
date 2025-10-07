@@ -1,7 +1,6 @@
-from ..models import Flight,FlightInstance
+from ..models import Flight,FlightInstance,FlightState
 from datetime import datetime,timezone,timedelta
 from ..services.kafka_service import KafkaService
-
 kafka_instance = KafkaService()
 
     
@@ -48,7 +47,7 @@ class FlightInstanceFactory:
             airline=flight.airline,
             Aircraft=flight.Aircraft,
             domestic=flight.domestic,
-            state="P",
+            state=FlightState.PENDING,
         )
 
 
@@ -70,30 +69,30 @@ class FlightInstanceRepository:
     
     @staticmethod
     def get_landed_flights():
-        return FlightInstance.objects.filter(state__in = ['TI','L'])
+        return FlightInstance.objects.filter(state__in = [FlightState.TAXIIN,FlightState.LANDING])
     
     @staticmethod
     def get_upcoming_flights(comparision_time):
         return FlightInstance.objects.filter(
-            departure_time__lt=comparision_time, state="A"
+            departure_time__lt=comparision_time, state=FlightState.ACCEPTED
         )
 
     
     @staticmethod
     def update_pending_flights(current_time,window_minutes):
         window_end = current_time + timedelta(minutes=window_minutes)
-        return FlightInstance.objects.filter(departure_time__range=(current_time, window_end),state = 'P').update(status='A')
+        return FlightInstance.objects.filter(departure_time__range=(current_time, window_end),state = FlightState.PENDING).update(status=FlightState.ACCEPTED)
         
     @staticmethod
     def get_flights(**filters):
         return FlightInstance.objects.filter(**filters)
-
 
 class FlightSchedulerService:
     def __init__(self, repo=FlightRepository, instance_repo=FlightInstanceRepository, calculator=FlightTimeCalculator):
         self.repo = repo
         self.instance_repo = instance_repo
         self.calculator = calculator
+
 
     def schedule(self, window_minutes=360):
         current_time = datetime.now(timezone.utc)
@@ -107,7 +106,8 @@ class FlightSchedulerService:
         for flight in new_flights:
             dep, arr = self.calculator.compute_times(flight, current_time)
             instances.append(FlightInstanceFactory.create_instance(flight, dep, arr))
-            kafka_instance.produce({"type":"departure_invoke","departure_time":dep.isoformat()})
+            
+            # kafka_instance.produce({"type":"departure_invoke","departure_time":dep.isoformat()})
 
         self.instance_repo.save_all(instances)
         return instances

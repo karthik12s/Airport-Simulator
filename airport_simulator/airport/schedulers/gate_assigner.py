@@ -4,6 +4,10 @@ from .airport_entity import AirportEntityHandler
 from .flight_scheduler import FlightInstanceRepository
 from collections import deque
 import logging
+from .flight_background_scheduler import FlightScheduleJob
+from airport.services.kafka_service import KafkaService
+
+flight_job_scheduler = FlightScheduleJob()
 
 gate_repository = AirportEntityHandler()
 
@@ -81,13 +85,15 @@ class GateScheduleService:
                 gate, updated_flight = self.calculator.assign_gate_time(gate, current_flight)
                 gate.save()
                 updated_flights.append(updated_flight)
+                KafkaService.produce(message = f"Flight {flight.code} assigned to Gate {flight.gate.code} Airport {flight.source.code} ")
+
 
             # delay remaining flights
             while flight_queue:
                 current_flight = flight_queue.popleft()
                 updated_flights.append(self.calculator.delay_flight(current_flight, self.delay_time))
 
-
+        flight_job_scheduler.schedule_push_back(updated_flights)
         self.flight_repo.update_all(updated_flights,["departure_time", "state","gate"])
         logger.info("Assigned/Delayed %d flights", len(updated_flights))
         return updated_flights

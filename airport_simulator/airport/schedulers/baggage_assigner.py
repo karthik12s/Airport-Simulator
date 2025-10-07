@@ -1,10 +1,11 @@
-from ..models import AirportEntity
-from datetime import datetime,timezone,timedelta
+from datetime import timedelta
 from .flight_scheduler import FlightInstanceRepository
 from .airport_entity import AirportEntityHandler
 from collections import deque
 import logging
-
+from airport.models import FlightState
+from airport.services.kafka_service import KafkaService
+from airport.schedulers.flight_background_scheduler import FlightScheduleJob
 
 baggage_repository = AirportEntityHandler()               
 
@@ -18,8 +19,8 @@ class BaggageTimeCalculator:
     def assign_baggage_time(baggage, flight, delay=20):
         baggage.free_at = flight.arrival_time + timedelta(minutes=BaggageTimeCalculator.DEFAULT_HANDLING_TIME)
         flight.baggage = baggage
-        flight.arr = baggage.free_at
-        flight.state = "B"  
+        flight.arrival_time = baggage.free_at
+        flight.state = FlightState.BAGGAGE
         return baggage, flight
 
     @staticmethod
@@ -76,6 +77,10 @@ class BaggageScheduleService:
                 baggage, updated_flight = self.calculator.assign_baggage_time(baggage, current_flight)
                 baggage.save()
                 updated_flights.append(updated_flight)
+                FlightScheduleJob.schedule_baggage_close(flight=updated_flight)
+                KafkaService.produce(message = f"Flight {flight.code} assigned with Baggage {flight.baggage.code} Airport {flight.destination.code} ")
+
+
 
             # Delay leftover flights
             while flight_queue:

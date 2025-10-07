@@ -4,6 +4,7 @@ from .flight_scheduler import FlightInstanceRepository
 from .airport_entity import AirportEntityHandler
 from collections import deque
 from datetime import datetime, timezone, timedelta
+from airport.schedulers.flight_background_scheduler import FlightScheduleJob
 
 a = AirportEntityHandler()
 
@@ -33,10 +34,12 @@ class RunwayAllocator:
                     flight.landing_runway = runway
                     runway.free_at = max(runway.free_at + timedelta(minutes=5), flight.arrival_time)
                     flight.arrival_time = runway.free_at
+                    FlightScheduleJob.schedule_landing(flight=flight)
             else:  # departure
                 flight.take_off_runway = runway
                 runway.free_at = max(runway.free_at , flight.departure_time)+ timedelta(minutes=5)
                 flight.departure_time = runway.free_at - timedelta(minutes=5)
+                FlightScheduleJob.schedule_takeoff(flight=flight)
 
             updated_flights.append(flight)
             runway.save()

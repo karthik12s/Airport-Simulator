@@ -1,6 +1,7 @@
 from kafka import KafkaProducer,KafkaConsumer
 import json
 import requests
+from airport_simulator.settings import URL
 
 class KafkaService():
     _instance = None
@@ -19,6 +20,6 @@ class KafkaService():
         consumer = KafkaConsumer(self._topic)
         for msg in consumer:
             # Posting the message to Websocket Notification service
-            requests.post("http://127.0.0.1:8000/web_socket_notification_reciever",data={"message":msg.value})
+            requests.post(URL+"/web_socket_notification_reciever",data={"message":msg.value})
 
 
