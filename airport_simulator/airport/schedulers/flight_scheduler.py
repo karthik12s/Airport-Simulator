@@ -81,7 +81,12 @@ class FlightInstanceRepository:
     @staticmethod
     def update_pending_flights(current_time,window_minutes):
         window_end = current_time + timedelta(minutes=window_minutes)
-        return FlightInstance.objects.filter(departure_time__range=(current_time, window_end),state = FlightState.PENDING).update(status=FlightState.ACCEPTED)
+        return FlightInstance.objects.filter(departure_time__range=(current_time, window_end),state = FlightState.PENDING).update(state=FlightState.ACCEPTED)
+    
+    @staticmethod
+    def update_approaching_flights(current_time,window_minutes):
+        window_end = current_time + timedelta(minutes=window_minutes)
+        return FlightInstance.objects.filter(departure_time__range=(current_time, window_end),state = FlightState.AIR).update(state=FlightState.INAPPROACH)
         
     @staticmethod
     def get_flights(**filters):
@@ -115,5 +120,7 @@ class FlightSchedulerService:
     def update_flight_status(self,window_minutes = 120):
         current_time = datetime.now(timezone.utc)
         flights_updated = self.instance_repo.update_pending_flights(current_time,window_minutes)
+        arrival_flights_updated = self.instance_repo.update_approaching_flights(current_time,window_minutes)
+        
         return flights_updated
 

@@ -52,11 +52,11 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Terminal',
             fields=[
+                ('id',models.AutoField(auto_created=True, primary_key=True, serialize=False,verbose_name='ID')),
                 ('code', models.CharField()),
                 ('active', models.BooleanField(default=True)),
                 ('capacity', models.IntegerField()),
                 ('domestic', models.BooleanField(default=True)),
-                ('pk', models.CompositePrimaryKey('airport', 'code', blank=True, editable=False, primary_key=True, serialize=False)),
                 ('airport', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='airport.airport')),
             ],
         ),

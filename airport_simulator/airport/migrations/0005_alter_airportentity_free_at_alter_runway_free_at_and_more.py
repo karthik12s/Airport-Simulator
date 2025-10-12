@@ -46,7 +46,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='FlightInstance',
             fields=[
-                ('code', models.CharField(primary_key=True, serialize=False)),
+                ('id',models.AutoField(auto_created=True, primary_key=True, serialize=False,verbose_name='ID')),
+                ('code', models.CharField(serialize=False)),
                 ('arrival_time', models.DateTimeField()),
                 ('departure_time', models.DateTimeField()),
                 ('scheduled_arrival_time', models.DateTimeField()),

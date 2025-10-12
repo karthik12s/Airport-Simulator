@@ -1,12 +1,12 @@
 from ..models import Runway, FlightState
-from datetime import datetime,timezone,timedelta
+from datetime import timedelta
 from .flight_scheduler import FlightInstanceRepository
 from .airport_entity import AirportEntityHandler
 from collections import deque
-from datetime import datetime, timezone, timedelta
 from airport.schedulers.flight_background_scheduler import FlightScheduleJob
-
+from airport.services.kafka_service import KafkaService
 a = AirportEntityHandler()
+kafka_service = KafkaService()
 
 class RunwayRepository():
 
@@ -30,16 +30,22 @@ class RunwayAllocator:
             if flight.state == FlightState.INAPPROACH:
                 if runway.free_at > flight.arrival_time + timedelta(minutes=30):
                     flight.state = FlightState.DIVERTED
+                    kafka_service.produce(message = f"Flight {flight.code} diverted from Airport {flight.destination.code}  due to Runway constraints")
                 else:
                     flight.landing_runway = runway
                     runway.free_at = max(runway.free_at + timedelta(minutes=5), flight.arrival_time)
                     flight.arrival_time = runway.free_at
                     FlightScheduleJob.schedule_landing(flight=flight)
+                    kafka_service.produce(message = f"Flight {flight.code} allotted with Runway {flight.landing_runway.number_1} Airport {flight.destination.code}  ")
+
             else:  # departure
                 flight.take_off_runway = runway
                 runway.free_at = max(runway.free_at , flight.departure_time)+ timedelta(minutes=5)
-                flight.departure_time = runway.free_at - timedelta(minutes=5)
+                flight.departure_time = runway.free_at
+                flight.state = FlightState.TAXIOUT
                 FlightScheduleJob.schedule_takeoff(flight=flight)
+                kafka_service.produce(message = f"Flight {flight.code} allotted with Runway {flight.take_off_runway.number_1} Airport {flight.source.code}  ")
+
 
             updated_flights.append(flight)
             runway.save()
@@ -55,11 +61,23 @@ class ATCService:
         self.runway_repo = runway_repo
         self.delay_time = delay_time
         self.allocator = RunwayAllocator()
+    
+    def start_ATC_scheduler(self):
+        arrivals = self.flight_repo.get_flights(state=FlightState.INAPPROACH,landing_runway = None)
+        departures = self.flight_repo.get_flights(state=FlightState.PUSHBACK,take_off_runway=None)
+        unique_airports = set()
+        for i in arrivals:
+            unique_airports.add(i.destination.code)
+        for i in departures:
+            unique_airports.add(i.source.code)
+        
+        for i in unique_airports:
+            self.assign_runways_for_airport(i)
 
 
     def assign_runways_for_airport(self, airport_code):
-        arrivals = self.flight_repo.get_flights(state=FlightState.INAPPROACH,landing_runway = None)
-        departures = self.flight_repo.get_flights(state=FlightState.PUSHBACK,take_off_runway=None)
+        arrivals = self.flight_repo.get_flights(destination__code = airport_code,state=FlightState.INAPPROACH,landing_runway = None)
+        departures = self.flight_repo.get_flights(source__code = airport_code,state=FlightState.PUSHBACK,take_off_runway=None)
         flights = self._merge_flights(arrivals, departures)
         print(flights)
 

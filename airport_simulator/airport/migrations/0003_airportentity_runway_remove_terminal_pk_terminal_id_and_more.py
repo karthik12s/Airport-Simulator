@@ -33,15 +33,11 @@ class Migration(migrations.Migration):
                 ('active', models.BooleanField(default=True)),
             ],
         ),
-        migrations.RemoveField(
-            model_name='terminal',
-            name='pk',
-        ),
-        migrations.AddField(
-            model_name='terminal',
-            name='id',
-            field=models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID'),
-        ),
+        # migrations.AddField(
+        #     model_name='terminal',
+        #     name='id',
+        #     field=models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID'),
+        # ),
         migrations.AddConstraint(
             model_name='terminal',
             constraint=models.UniqueConstraint(fields=('code', 'airport'), name='unique_terminal'),

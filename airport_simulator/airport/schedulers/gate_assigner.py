@@ -75,6 +75,7 @@ class GateScheduleService:
 
         # iterate airport-wise
         for airport_code, flights in airport_to_flights.items():
+            updated_flights = []
             gates = self.gate_repo.get_active_gates_for_airport(airport_code)
             flight_queue = FlightQueueFactory.build_flight_queue(flights)
 
@@ -85,16 +86,17 @@ class GateScheduleService:
                 gate, updated_flight = self.calculator.assign_gate_time(gate, current_flight)
                 gate.save()
                 updated_flights.append(updated_flight)
-                KafkaService.produce(message = f"Flight {flight.code} assigned to Gate {flight.gate.code} Airport {flight.source.code} ")
-
+                KafkaService().produce(message = f"Flight {updated_flight.code} assigned to Gate {updated_flight.gate.code} Airport {updated_flight.source.code} ")
+            flight_job_scheduler.schedule_pushback(updated_flights)
 
             # delay remaining flights
             while flight_queue:
                 current_flight = flight_queue.popleft()
                 updated_flights.append(self.calculator.delay_flight(current_flight, self.delay_time))
-
-        flight_job_scheduler.schedule_push_back(updated_flights)
-        self.flight_repo.update_all(updated_flights,["departure_time", "state","gate"])
+        
+            self.flight_repo.update_all(updated_flights,["departure_time", "state","gate"])
+        
+        
         logger.info("Assigned/Delayed %d flights", len(updated_flights))
         return updated_flights
     

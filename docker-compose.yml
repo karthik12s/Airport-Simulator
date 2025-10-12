@@ -1,0 +1,96 @@
+# version: '3.8'
+
+# services:
+#   zookeeper:
+#     image: confluentinc/cp-zookeeper:7.0.1
+#     container_name: zookeeper
+#     environment:
+#       ZOOKEEPER_CLIENT_PORT: 2181
+#       ZOOKEEPER_TICK_TIME: 2000
+
+#   kafka:
+#     image: confluentinc/cp-kafka:7.0.1
+#     container_name: kafka
+#     ports:
+#       - "9092:9092"
+#     depends_on:
+#       - zookeeper
+#     environment:
+#       KAFKA_BROKER_ID: 1
+#       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+#       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
+#       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+#       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+#       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+#     command: sh -c "/wait-for-zookeeper.sh zookeeper 2181 /etc/confluent/docker/run"
+#     volumes:
+#       - ./wait-for-zookeeper.sh:/wait-for-zookeeper.sh
+
+#   app:
+#     build: .
+#     container_name: airport-simulator
+#     command: python airport_simulator/manage.py runserver 0.0.0.0:8000
+#     ports:
+#       - "8000:8000"
+#     volumes:
+#       - .:/app
+#     depends_on:
+#       - kafka
+#     environment:
+#       KAFKA_BOOTSTRAP_SERVERS: kafka:29092 # Use the internal Docker network name and port
+
+version: '3.8'
+
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.0.1
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+  kafka:
+    image: confluentinc/cp-kafka:7.0.1
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    command: sh -c "/wait-for-zookeeper.sh zookeeper 2181 /etc/confluent/docker/run"
+    volumes:
+      - ./wait-for-zookeeper.sh:/wait-for-zookeeper.sh
+
+  app:
+    build: .
+    container_name: airport-simulator
+    command: python airport_simulator/manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    depends_on:
+      - kafka
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+
+  streamlit:
+    build: . 
+    container_name: streamlit-dashboard
+    command: streamlit run flight_dashboard_app.py --server.address 0.0.0.0 --server.port 8501
+    ports:
+      - "8501:8501" 
+    volumes:
+      - .:/app
+    depends_on:
+      - app 
+      - kafka 
+    environment:
+      API_BASE_URL: http://app:8000
+      WEBSOCKET_URL: ws://app:8000/airport/socket

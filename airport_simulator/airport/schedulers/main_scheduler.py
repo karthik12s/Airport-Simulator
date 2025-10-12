@@ -10,7 +10,7 @@ def my_scheduled_task():
 
     flight_scheduler = FlightSchedulerService()
     flight_scheduler.schedule(window_minutes=360)
-
+    flight_scheduler.update_flight_status(window_minutes=120)
     gate_scheduler = GateScheduleService()
     gate_scheduler.assign_gates()
 
@@ -18,13 +18,14 @@ def my_scheduled_task():
     baggage_scheduler.assign_baggage()
 
     atc = ATCService()
-    atc.assign_runways_for_airport("HYD")
+    atc.start_ATC_scheduler()
 
     print("Scheduled task executed!")
 
 
 def start():
     scheduler = BackgroundScheduler()
+    my_scheduled_task()
     scheduler.add_job(my_scheduled_task, "interval", seconds=300)  
     scheduler.start()
     return scheduler

@@ -1,0 +1,4250 @@
+[
+  {
+    "code": "AI 801",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "08:00",
+    "arrival_time": "09:55",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 501",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "08:05",
+    "arrival_time": "10:10",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 502",
+    "source": "HYD",
+    "destination": "BLR",
+    "departure_time": "08:10",
+    "arrival_time": "09:20",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AI 234",
+    "source": "DEL",
+    "destination": "LHR",
+    "departure_time": "08:15",
+    "arrival_time": "12:45",
+    "airline": "Air India",
+    "Aircraft": "Boeing 787 Dreamliner"
+  },
+  {
+    "code": "EK 201",
+    "source": "DXB",
+    "destination": "BOM",
+    "departure_time": "08:20",
+    "arrival_time": "11:50",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 101",
+    "source": "DOH",
+    "destination": "DEL",
+    "departure_time": "08:25",
+    "arrival_time": "13:50",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "6E 503",
+    "source": "DEL",
+    "destination": "MAA",
+    "departure_time": "08:30",
+    "arrival_time": "11:10",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 504",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "08:35",
+    "arrival_time": "10:00",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "6E 505",
+    "source": "BLR",
+    "destination": "CCU",
+    "departure_time": "08:40",
+    "arrival_time": "11:20",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "BA 202",
+    "source": "LHR",
+    "destination": "JFK",
+    "departure_time": "08:45",
+    "arrival_time": "16:45",
+    "airline": "British Airways",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "AA 111",
+    "source": "DFW",
+    "destination": "JFK",
+    "departure_time": "08:50",
+    "arrival_time": "12:00",
+    "airline": "American Airlines",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "SQ 211",
+    "source": "SIN",
+    "destination": "MAA",
+    "departure_time": "08:55",
+    "arrival_time": "10:45",
+    "airline": "Singapore Airlines",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AI 802",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "09:00",
+    "arrival_time": "10:15",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 506",
+    "source": "DEL",
+    "destination": "HYD",
+    "departure_time": "09:05",
+    "arrival_time": "11:15",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 507",
+    "source": "BOM",
+    "destination": "MAA",
+    "departure_time": "09:10",
+    "arrival_time": "11:15",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AF 301",
+    "source": "CDG",
+    "destination": "LHR",
+    "departure_time": "09:15",
+    "arrival_time": "11:30",
+    "airline": "Air France",
+    "Aircraft": "Airbus A220"
+  },
+  {
+    "code": "EK 202",
+    "source": "BOM",
+    "destination": "DXB",
+    "departure_time": "09:20",
+    "arrival_time": "12:15",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 102",
+    "source": "DEL",
+    "destination": "DOH",
+    "departure_time": "09:25",
+    "arrival_time": "11:30",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "6E 508",
+    "source": "HYD",
+    "destination": "BOM",
+    "departure_time": "09:30",
+    "arrival_time": "10:55",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "BA 201",
+    "source": "JFK",
+    "destination": "LHR",
+    "departure_time": "09:35",
+    "arrival_time": "17:35",
+    "airline": "British Airways",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "6E 509",
+    "source": "BLR",
+    "destination": "DEL",
+    "departure_time": "09:40",
+    "arrival_time": "12:20",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AA 112",
+    "source": "JFK",
+    "destination": "LAX",
+    "departure_time": "09:45",
+    "arrival_time": "12:45",
+    "airline": "American Airlines",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "AI 803",
+    "source": "DEL",
+    "destination": "CCU",
+    "departure_time": "09:50",
+    "arrival_time": "12:00",
+    "airline": "Air India",
+    "Aircraft": "Airbus A319"
+  },
+  {
+    "code": "6E 510",
+    "source": "MAA",
+    "destination": "HYD",
+    "departure_time": "09:55",
+    "arrival_time": "11:05",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AA 113",
+    "source": "JFK",
+    "destination": "DFW",
+    "departure_time": "10:00",
+    "arrival_time": "13:05",
+    "airline": "American Airlines",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "BA 203",
+    "source": "BOM",
+    "destination": "LHR",
+    "departure_time": "10:05",
+    "arrival_time": "15:45",
+    "airline": "British Airways",
+    "Aircraft": "Boeing 787 Dreamliner"
+  },
+  {
+    "code": "SQ 212",
+    "source": "MAA",
+    "destination": "SIN",
+    "departure_time": "10:10",
+    "arrival_time": "15:45",
+    "airline": "Singapore Airlines",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "LH 301",
+    "source": "FRA",
+    "destination": "DEL",
+    "departure_time": "10:15",
+    "arrival_time": "20:00",
+    "airline": "Lufthansa",
+    "Aircraft": "Boeing 747-8"
+  },
+  {
+    "code": "EK 203",
+    "source": "DEL",
+    "destination": "DXB",
+    "departure_time": "10:20",
+    "arrival_time": "13:40",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "6E 511",
+    "source": "CCU",
+    "destination": "DEL",
+    "departure_time": "10:25",
+    "arrival_time": "12:35",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "QF 401",
+    "source": "SYD",
+    "destination": "LHR",
+    "departure_time": "10:30",
+    "arrival_time": "23:00",
+    "airline": "Qantas",
+    "Aircraft": "Boeing 787 Dreamliner"
+  },
+  {
+    "code": "6E 512",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "10:35",
+    "arrival_time": "12:30",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 513",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "10:40",
+    "arrival_time": "12:05",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "AI 804",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "10:45",
+    "arrival_time": "12:50",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AA 114",
+    "source": "LHR",
+    "destination": "JFK",
+    "departure_time": "10:50",
+    "arrival_time": "18:50",
+    "airline": "American Airlines",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "AF 302",
+    "source": "CDG",
+    "destination": "LAX",
+    "departure_time": "10:55",
+    "arrival_time": "14:00",
+    "airline": "Air France",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "EK 204",
+    "source": "DXB",
+    "destination": "DEL",
+    "departure_time": "11:00",
+    "arrival_time": "14:15",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "6E 514",
+    "source": "HYD",
+    "destination": "DEL",
+    "departure_time": "11:05",
+    "arrival_time": "13:10",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 515",
+    "source": "MAA",
+    "destination": "BOM",
+    "departure_time": "11:10",
+    "arrival_time": "13:15",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 516",
+    "source": "BLR",
+    "destination": "HYD",
+    "departure_time": "11:15",
+    "arrival_time": "12:25",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "LH 302",
+    "source": "DEL",
+    "destination": "FRA",
+    "departure_time": "11:20",
+    "arrival_time": "15:45",
+    "airline": "Lufthansa",
+    "Aircraft": "Boeing 747-8"
+  },
+  {
+    "code": "QF 402",
+    "source": "LHR",
+    "destination": "SYD",
+    "departure_time": "11:25",
+    "arrival_time": "10:45",
+    "airline": "Qantas",
+    "Aircraft": "Boeing 787 Dreamliner"
+  },
+  {
+    "code": "6E 517",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "11:30",
+    "arrival_time": "13:25",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "BA 204",
+    "source": "LHR",
+    "destination": "BOM",
+    "departure_time": "11:35",
+    "arrival_time": "21:30",
+    "airline": "British Airways",
+    "Aircraft": "Boeing 787 Dreamliner"
+  },
+  {
+    "code": "6E 518",
+    "source": "HYD",
+    "destination": "BOM",
+    "departure_time": "11:40",
+    "arrival_time": "13:05",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "VS 401",
+    "source": "LHR",
+    "destination": "JFK",
+    "departure_time": "11:45",
+    "arrival_time": "19:45",
+    "airline": "Virgin Atlantic",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 805",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "11:50",
+    "arrival_time": "13:45",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 519",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "11:55",
+    "arrival_time": "14:00",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 520",
+    "source": "DEL",
+    "destination": "HYD",
+    "departure_time": "12:00",
+    "arrival_time": "14:10",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 521",
+    "source": "MAA",
+    "destination": "DEL",
+    "departure_time": "12:05",
+    "arrival_time": "14:45",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AA 115",
+    "source": "JFK",
+    "destination": "LAX",
+    "departure_time": "12:10",
+    "arrival_time": "15:10",
+    "airline": "American Airlines",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "AI 806",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "12:15",
+    "arrival_time": "14:20",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 205",
+    "source": "DXB",
+    "destination": "JFK",
+    "departure_time": "12:20",
+    "arrival_time": "19:00",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 103",
+    "source": "DOH",
+    "destination": "BOM",
+    "departure_time": "12:25",
+    "arrival_time": "17:15",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "6E 522",
+    "source": "HYD",
+    "destination": "MAA",
+    "departure_time": "12:30",
+    "arrival_time": "13:40",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "BA 205",
+    "source": "LHR",
+    "destination": "JFK",
+    "departure_time": "12:35",
+    "arrival_time": "20:35",
+    "airline": "British Airways",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "AI 807",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "12:40",
+    "arrival_time": "14:45",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 523",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "12:45",
+    "arrival_time": "14:40",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 524",
+    "source": "HYD",
+    "destination": "BOM",
+    "departure_time": "12:50",
+    "arrival_time": "14:15",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 206",
+    "source": "DEL",
+    "destination": "DXB",
+    "departure_time": "12:55",
+    "arrival_time": "16:15",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "6E 525",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "13:00",
+    "arrival_time": "14:25",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "6E 526",
+    "source": "MAA",
+    "destination": "CCU",
+    "departure_time": "13:05",
+    "arrival_time": "15:35",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AI 808",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "13:10",
+    "arrival_time": "15:05",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "LH 303",
+    "source": "JFK",
+    "destination": "FRA",
+    "departure_time": "13:15",
+    "arrival_time": "21:15",
+    "airline": "Lufthansa",
+    "Aircraft": "Boeing 747-8"
+  },
+  {
+    "code": "AA 116",
+    "source": "LAX",
+    "destination": "JFK",
+    "departure_time": "13:20",
+    "arrival_time": "22:30",
+    "airline": "American Airlines",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "6E 527",
+    "source": "BOM",
+    "destination": "MAA",
+    "departure_time": "13:25",
+    "arrival_time": "15:30",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "QR 104",
+    "source": "BOM",
+    "destination": "DOH",
+    "departure_time": "13:30",
+    "arrival_time": "16:25",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 809",
+    "source": "HYD",
+    "destination": "DEL",
+    "departure_time": "13:35",
+    "arrival_time": "15:45",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "VS 402",
+    "source": "JFK",
+    "destination": "LHR",
+    "departure_time": "13:40",
+    "arrival_time": "21:40",
+    "airline": "Virgin Atlantic",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "6E 528",
+    "source": "CCU",
+    "destination": "MAA",
+    "departure_time": "13:45",
+    "arrival_time": "16:15",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "SQ 213",
+    "source": "SIN",
+    "destination": "DEL",
+    "departure_time": "13:50",
+    "arrival_time": "17:30",
+    "airline": "Singapore Airlines",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "AA 117",
+    "source": "DFW",
+    "destination": "JFK",
+    "departure_time": "13:55",
+    "arrival_time": "17:00",
+    "airline": "American Airlines",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "AI 810",
+    "source": "DEL",
+    "destination": "HYD",
+    "departure_time": "14:00",
+    "arrival_time": "16:10",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 529",
+    "source": "BLR",
+    "destination": "BOM",
+    "departure_time": "14:05",
+    "arrival_time": "15:55",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "BA 206",
+    "source": "BOM",
+    "destination": "LHR",
+    "departure_time": "14:10",
+    "arrival_time": "20:00",
+    "airline": "British Airways",
+    "Aircraft": "Boeing 787 Dreamliner"
+  },
+  {
+    "code": "EK 207",
+    "source": "JFK",
+    "destination": "DXB",
+    "departure_time": "14:15",
+    "arrival_time": "09:30",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "6E 530",
+    "source": "BOM",
+    "destination": "BLR",
+    "departure_time": "14:20",
+    "arrival_time": "16:05",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "LH 304",
+    "source": "FRA",
+    "destination": "JFK",
+    "departure_time": "14:25",
+    "arrival_time": "21:15",
+    "airline": "Lufthansa",
+    "Aircraft": "Boeing 747-8"
+  },
+  {
+    "code": "AI 811",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "14:30",
+    "arrival_time": "16:25",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "QR 105",
+    "source": "DOH",
+    "destination": "BOM",
+    "departure_time": "14:35",
+    "arrival_time": "19:25",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "6E 531",
+    "source": "HYD",
+    "destination": "DEL",
+    "departure_time": "14:40",
+    "arrival_time": "16:45",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "AA 118",
+    "source": "JFK",
+    "destination": "DFW",
+    "departure_time": "14:45",
+    "arrival_time": "17:50",
+    "airline": "American Airlines",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 532",
+    "source": "MAA",
+    "destination": "DEL",
+    "departure_time": "14:50",
+    "arrival_time": "17:30",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AI 812",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "14:55",
+    "arrival_time": "17:00",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 208",
+    "source": "DEL",
+    "destination": "DXB",
+    "departure_time": "15:00",
+    "arrival_time": "18:20",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "6E 533",
+    "source": "BLR",
+    "destination": "MAA",
+    "departure_time": "15:05",
+    "arrival_time": "16:15",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 534",
+    "source": "HYD",
+    "destination": "CCU",
+    "departure_time": "15:10",
+    "arrival_time": "17:30",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AA 119",
+    "source": "LAX",
+    "destination": "JFK",
+    "departure_time": "15:15",
+    "arrival_time": "00:25",
+    "airline": "American Airlines",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "SQ 214",
+    "source": "DEL",
+    "destination": "SIN",
+    "departure_time": "15:20",
+    "arrival_time": "23:00",
+    "airline": "Singapore Airlines",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "BA 207",
+    "source": "LHR",
+    "destination": "JFK",
+    "departure_time": "15:25",
+    "arrival_time": "23:25",
+    "airline": "British Airways",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "6E 535",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "15:30",
+    "arrival_time": "17:35",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "QR 106",
+    "source": "DOH",
+    "destination": "BOM",
+    "departure_time": "15:35",
+    "arrival_time": "20:25",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 813",
+    "source": "CCU",
+    "destination": "DEL",
+    "departure_time": "15:40",
+    "arrival_time": "17:50",
+    "airline": "Air India",
+    "Aircraft": "Airbus A319"
+  },
+  {
+    "code": "6E 536",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "15:45",
+    "arrival_time": "17:40",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 537",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "15:50",
+    "arrival_time": "17:15",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "LH 305",
+    "source": "DEL",
+    "destination": "FRA",
+    "departure_time": "15:55",
+    "arrival_time": "20:20",
+    "airline": "Lufthansa",
+    "Aircraft": "Boeing 747-8"
+  },
+  {
+    "code": "6E 538",
+    "source": "HYD",
+    "destination": "BLR",
+    "departure_time": "16:00",
+    "arrival_time": "17:10",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AA 120",
+    "source": "JFK",
+    "destination": "LAX",
+    "departure_time": "16:05",
+    "arrival_time": "19:05",
+    "airline": "American Airlines",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "EK 209",
+    "source": "DXB",
+    "destination": "BOM",
+    "departure_time": "16:10",
+    "arrival_time": "19:40",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "6E 539",
+    "source": "MAA",
+    "destination": "BOM",
+    "departure_time": "16:15",
+    "arrival_time": "18:20",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "QR 107",
+    "source": "DEL",
+    "destination": "DOH",
+    "departure_time": "16:20",
+    "arrival_time": "18:25",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 814",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "16:25",
+    "arrival_time": "18:30",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "BA 208",
+    "source": "JFK",
+    "destination": "LHR",
+    "departure_time": "16:30",
+    "arrival_time": "00:30",
+    "airline": "British Airways",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "6E 540",
+    "source": "DEL",
+    "destination": "HYD",
+    "departure_time": "16:35",
+    "arrival_time": "18:45",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 541",
+    "source": "BOM",
+    "destination": "BLR",
+    "departure_time": "16:40",
+    "arrival_time": "18:30",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AI 815",
+    "source": "HYD",
+    "destination": "BOM",
+    "departure_time": "16:45",
+    "arrival_time": "18:10",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "VS 403",
+    "source": "JFK",
+    "destination": "LHR",
+    "departure_time": "16:50",
+    "arrival_time": "00:50",
+    "airline": "Virgin Atlantic",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "6E 542",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "16:55",
+    "arrival_time": "18:50",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 543",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "17:00",
+    "arrival_time": "19:05",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 210",
+    "source": "BOM",
+    "destination": "DXB",
+    "departure_time": "17:05",
+    "arrival_time": "20:00",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 108",
+    "source": "BOM",
+    "destination": "DOH",
+    "departure_time": "17:10",
+    "arrival_time": "20:05",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 816",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "17:15",
+    "arrival_time": "19:10",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "LH 306",
+    "source": "FRA",
+    "destination": "DEL",
+    "departure_time": "17:20",
+    "arrival_time": "02:50",
+    "airline": "Lufthansa",
+    "Aircraft": "Boeing 747-8"
+  },
+  {
+    "code": "6E 544",
+    "source": "HYD",
+    "destination": "MAA",
+    "departure_time": "17:25",
+    "arrival_time": "18:35",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "BA 209",
+    "source": "LHR",
+    "destination": "JFK",
+    "departure_time": "17:30",
+    "arrival_time": "01:30",
+    "airline": "British Airways",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "6E 545",
+    "source": "MAA",
+    "destination": "DEL",
+    "departure_time": "17:35",
+    "arrival_time": "20:15",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "SQ 215",
+    "source": "SIN",
+    "destination": "BOM",
+    "departure_time": "17:40",
+    "arrival_time": "21:10",
+    "airline": "Singapore Airlines",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AI 817",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "17:45",
+    "arrival_time": "19:50",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 546",
+    "source": "DEL",
+    "destination": "HYD",
+    "departure_time": "17:50",
+    "arrival_time": "20:00",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 211",
+    "source": "DXB",
+    "destination": "DEL",
+    "departure_time": "17:55",
+    "arrival_time": "21:15",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 109",
+    "source": "DOH",
+    "destination": "DEL",
+    "departure_time": "18:00",
+    "arrival_time": "20:05",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "6E 547",
+    "source": "BLR",
+    "destination": "CCU",
+    "departure_time": "18:05",
+    "arrival_time": "20:45",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AA 121",
+    "source": "DFW",
+    "destination": "JFK",
+    "departure_time": "18:10",
+    "arrival_time": "21:15",
+    "airline": "American Airlines",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "AI 818",
+    "source": "HYD",
+    "destination": "DEL",
+    "departure_time": "18:15",
+    "arrival_time": "20:25",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "QF 403",
+    "source": "SYD",
+    "destination": "LHR",
+    "departure_time": "18:20",
+    "arrival_time": "07:00",
+    "airline": "Qantas",
+    "Aircraft": "Boeing 787 Dreamliner"
+  },
+  {
+    "code": "6E 548",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "18:25",
+    "arrival_time": "20:20",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 549",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "18:30",
+    "arrival_time": "19:55",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "LH 307",
+    "source": "JFK",
+    "destination": "FRA",
+    "departure_time": "18:35",
+    "arrival_time": "02:35",
+    "airline": "Lufthansa",
+    "Aircraft": "Boeing 747-8"
+  },
+  {
+    "code": "AA 122",
+    "source": "LAX",
+    "destination": "JFK",
+    "departure_time": "18:40",
+    "arrival_time": "03:50",
+    "airline": "American Airlines",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "AI 819",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "18:45",
+    "arrival_time": "20:50",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 212",
+    "source": "DXB",
+    "destination": "SYD",
+    "departure_time": "18:50",
+    "arrival_time": "15:30",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 110",
+    "source": "DEL",
+    "destination": "DOH",
+    "departure_time": "18:55",
+    "arrival_time": "21:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "6E 550",
+    "source": "BOM",
+    "destination": "BLR",
+    "departure_time": "19:00",
+    "arrival_time": "20:50",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "BA 210",
+    "source": "JFK",
+    "destination": "LHR",
+    "departure_time": "19:05",
+    "arrival_time": "03:05",
+    "airline": "British Airways",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "6E 551",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "19:10",
+    "arrival_time": "21:05",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AI 820",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "19:15",
+    "arrival_time": "21:20",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "AA 123",
+    "source": "JFK",
+    "destination": "DFW",
+    "departure_time": "19:20",
+    "arrival_time": "22:25",
+    "airline": "American Airlines",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 552",
+    "source": "MAA",
+    "destination": "HYD",
+    "departure_time": "19:25",
+    "arrival_time": "20:35",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "LH 308",
+    "source": "DEL",
+    "destination": "FRA",
+    "departure_time": "19:30",
+    "arrival_time": "00:00",
+    "airline": "Lufthansa",
+    "Aircraft": "Boeing 747-8"
+  },
+  {
+    "code": "SQ 216",
+    "source": "BOM",
+    "destination": "SIN",
+    "departure_time": "19:35",
+    "arrival_time": "03:05",
+    "airline": "Singapore Airlines",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "EK 213",
+    "source": "DXB",
+    "destination": "LHR",
+    "departure_time": "19:40",
+    "arrival_time": "23:55",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "AI 821",
+    "source": "HYD",
+    "destination": "BOM",
+    "departure_time": "19:45",
+    "arrival_time": "21:10",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "QR 111",
+    "source": "BOM",
+    "destination": "DOH",
+    "departure_time": "19:50",
+    "arrival_time": "22:45",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "6E 553",
+    "source": "DEL",
+    "destination": "CCU",
+    "departure_time": "19:55",
+    "arrival_time": "22:05",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "BA 211",
+    "source": "LHR",
+    "destination": "JFK",
+    "departure_time": "20:00",
+    "arrival_time": "04:00",
+    "airline": "British Airways",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "AI 822",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "20:05",
+    "arrival_time": "22:10",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 554",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "20:10",
+    "arrival_time": "22:05",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 555",
+    "source": "HYD",
+    "destination": "BLR",
+    "departure_time": "20:15",
+    "arrival_time": "21:25",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 214",
+    "source": "LHR",
+    "destination": "DXB",
+    "departure_time": "20:20",
+    "arrival_time": "06:30",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 112",
+    "source": "DEL",
+    "destination": "DOH",
+    "departure_time": "20:25",
+    "arrival_time": "22:30",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 823",
+    "source": "CCU",
+    "destination": "BOM",
+    "departure_time": "20:30",
+    "arrival_time": "22:50",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 556",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "20:35",
+    "arrival_time": "22:40",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "BA 212",
+    "source": "JFK",
+    "destination": "LHR",
+    "departure_time": "20:40",
+    "arrival_time": "04:40",
+    "airline": "British Airways",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "6E 557",
+    "source": "DEL",
+    "destination": "MAA",
+    "departure_time": "20:45",
+    "arrival_time": "23:25",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AI 824",
+    "source": "BOM",
+    "destination": "CCU",
+    "departure_time": "20:50",
+    "arrival_time": "23:10",
+    "airline": "Air India",
+    "Aircraft": "Airbus A319"
+  },
+  {
+    "code": "LH 309",
+    "source": "FRA",
+    "destination": "DEL",
+    "departure_time": "20:55",
+    "arrival_time": "06:25",
+    "airline": "Lufthansa",
+    "Aircraft": "Boeing 747-8"
+  },
+  {
+    "code": "SQ 217",
+    "source": "BOM",
+    "destination": "SIN",
+    "departure_time": "21:00",
+    "arrival_time": "04:30",
+    "airline": "Singapore Airlines",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 215",
+    "source": "SYD",
+    "destination": "DXB",
+    "departure_time": "21:05",
+    "arrival_time": "04:45",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 113",
+    "source": "DOH",
+    "destination": "DEL",
+    "departure_time": "21:10",
+    "arrival_time": "01:15",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 825",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "21:15",
+    "arrival_time": "23:20",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 558",
+    "source": "BOM",
+    "destination": "MAA",
+    "departure_time": "21:20",
+    "arrival_time": "23:25",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "BA 213",
+    "source": "LHR",
+    "destination": "JFK",
+    "departure_time": "21:25",
+    "arrival_time": "05:25",
+    "airline": "British Airways",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "6E 559",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "21:30",
+    "arrival_time": "23:25",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AI 826",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "21:35",
+    "arrival_time": "23:00",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 560",
+    "source": "HYD",
+    "destination": "DEL",
+    "departure_time": "21:40",
+    "arrival_time": "23:50",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "LH 310",
+    "source": "JFK",
+    "destination": "FRA",
+    "departure_time": "21:45",
+    "arrival_time": "05:45",
+    "airline": "Lufthansa",
+    "Aircraft": "Boeing 747-8"
+  },
+  {
+    "code": "EK 216",
+    "source": "DXB",
+    "destination": "DEL",
+    "departure_time": "21:50",
+    "arrival_time": "01:05",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "6E 561",
+    "source": "BLR",
+    "destination": "DEL",
+    "departure_time": "21:55",
+    "arrival_time": "00:35",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AI 827",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "22:00",
+    "arrival_time": "00:05",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 562",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "22:05",
+    "arrival_time": "23:30",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "QR 114",
+    "source": "DEL",
+    "destination": "DOH",
+    "departure_time": "22:10",
+    "arrival_time": "00:15",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "BA 214",
+    "source": "JFK",
+    "destination": "LHR",
+    "departure_time": "22:15",
+    "arrival_time": "06:15",
+    "airline": "British Airways",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "AI 828",
+    "source": "HYD",
+    "destination": "BOM",
+    "departure_time": "22:20",
+    "arrival_time": "23:45",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 563",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "22:25",
+    "arrival_time": "00:20",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 217",
+    "source": "DXB",
+    "destination": "JFK",
+    "departure_time": "22:30",
+    "arrival_time": "05:10",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 115",
+    "source": "DOH",
+    "destination": "BLR",
+    "departure_time": "22:35",
+    "arrival_time": "05:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 829",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "22:40",
+    "arrival_time": "00:45",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 564",
+    "source": "MAA",
+    "destination": "DEL",
+    "departure_time": "22:45",
+    "arrival_time": "01:25",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "LH 311",
+    "source": "FRA",
+    "destination": "JFK",
+    "departure_time": "22:50",
+    "arrival_time": "06:50",
+    "airline": "Lufthansa",
+    "Aircraft": "Boeing 747-8"
+  },
+  {
+    "code": "6E 565",
+    "source": "DEL",
+    "destination": "HYD",
+    "departure_time": "22:55",
+    "arrival_time": "01:05",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 218",
+    "source": "BOM",
+    "destination": "DXB",
+    "departure_time": "23:00",
+    "arrival_time": "01:55",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 116",
+    "source": "BLR",
+    "destination": "DOH",
+    "departure_time": "23:05",
+    "arrival_time": "01:20",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 830",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "23:10",
+    "arrival_time": "01:05",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 566",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "23:15",
+    "arrival_time": "01:20",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "BA 215",
+    "source": "LHR",
+    "destination": "BOM",
+    "departure_time": "23:20",
+    "arrival_time": "09:20",
+    "airline": "British Airways",
+    "Aircraft": "Boeing 787 Dreamliner"
+  },
+  {
+    "code": "6E 567",
+    "source": "HYD",
+    "destination": "BOM",
+    "departure_time": "23:25",
+    "arrival_time": "00:50",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "SQ 218",
+    "source": "SIN",
+    "destination": "DEL",
+    "departure_time": "23:30",
+    "arrival_time": "03:10",
+    "airline": "Singapore Airlines",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "AA 124",
+    "source": "JFK",
+    "destination": "LAX",
+    "departure_time": "23:35",
+    "arrival_time": "02:40",
+    "airline": "American Airlines",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "AI 831",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "23:40",
+    "arrival_time": "00:55",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 219",
+    "source": "DXB",
+    "destination": "BKK",
+    "departure_time": "23:45",
+    "arrival_time": "04:45",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 117",
+    "source": "DOH",
+    "destination": "BOM",
+    "departure_time": "23:50",
+    "arrival_time": "04:40",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "6E 568",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "23:55",
+    "arrival_time": "01:50",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "AA 201",
+    "source": "JFK",
+    "destination": "LHR",
+    "departure_time": "00:00",
+    "arrival_time": "08:30",
+    "airline": "American Airlines",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "EK 301",
+    "source": "DXB",
+    "destination": "SYD",
+    "departure_time": "00:15",
+    "arrival_time": "22:00",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "6E 601",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "00:20",
+    "arrival_time": "02:15",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AI 901",
+    "source": "HYD",
+    "destination": "BLR",
+    "departure_time": "00:25",
+    "arrival_time": "01:35",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "SQ 401",
+    "source": "SIN",
+    "destination": "AKL",
+    "departure_time": "00:30",
+    "arrival_time": "15:00",
+    "airline": "Singapore Airlines",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "QR 501",
+    "source": "DOH",
+    "destination": "CPT",
+    "departure_time": "00:45",
+    "arrival_time": "08:45",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "6E 602",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "00:50",
+    "arrival_time": "02:55",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 302",
+    "source": "DXB",
+    "destination": "BOM",
+    "departure_time": "01:00",
+    "arrival_time": "04:30",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "AI 902",
+    "source": "DEL",
+    "destination": "CCU",
+    "departure_time": "01:05",
+    "arrival_time": "03:15",
+    "airline": "Air India",
+    "Aircraft": "Airbus A319"
+  },
+  {
+    "code": "UA 701",
+    "source": "ORD",
+    "destination": "FRA",
+    "departure_time": "01:10",
+    "arrival_time": "15:25",
+    "airline": "United Airlines",
+    "Aircraft": "Boeing 767"
+  },
+  {
+    "code": "6E 603",
+    "source": "CCU",
+    "destination": "DEL",
+    "departure_time": "01:15",
+    "arrival_time": "03:25",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "SQ 402",
+    "source": "SIN",
+    "destination": "HYD",
+    "departure_time": "01:20",
+    "arrival_time": "04:55",
+    "airline": "Singapore Airlines",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "BA 101",
+    "source": "LHR",
+    "destination": "BOM",
+    "departure_time": "01:30",
+    "arrival_time": "11:30",
+    "airline": "British Airways",
+    "Aircraft": "Boeing 787 Dreamliner"
+  },
+  {
+    "code": "6E 604",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "01:35",
+    "arrival_time": "03:40",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "AI 903",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "01:40",
+    "arrival_time": "03:35",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 303",
+    "source": "DXB",
+    "destination": "DEL",
+    "departure_time": "01:45",
+    "arrival_time": "05:05",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 502",
+    "source": "DOH",
+    "destination": "BOM",
+    "departure_time": "01:50",
+    "arrival_time": "06:40",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "6E 605",
+    "source": "BOM",
+    "destination": "BLR",
+    "departure_time": "01:55",
+    "arrival_time": "03:45",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AA 202",
+    "source": "JFK",
+    "destination": "LAX",
+    "departure_time": "02:00",
+    "arrival_time": "05:15",
+    "airline": "American Airlines",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "AI 904",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "02:05",
+    "arrival_time": "04:00",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 304",
+    "source": "DXB",
+    "destination": "HYD",
+    "departure_time": "02:10",
+    "arrival_time": "05:25",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 503",
+    "source": "DOH",
+    "destination": "MAA",
+    "departure_time": "02:15",
+    "arrival_time": "07:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "6E 606",
+    "source": "BLR",
+    "destination": "DEL",
+    "departure_time": "02:20",
+    "arrival_time": "05:00",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AI 905",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "02:25",
+    "arrival_time": "04:30",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "VS 501",
+    "source": "LHR",
+    "destination": "JFK",
+    "departure_time": "02:30",
+    "arrival_time": "10:45",
+    "airline": "Virgin Atlantic",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "6E 607",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "02:35",
+    "arrival_time": "04:30",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 305",
+    "source": "DXB",
+    "destination": "CCU",
+    "departure_time": "02:40",
+    "arrival_time": "08:10",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 504",
+    "source": "DOH",
+    "destination": "BLR",
+    "departure_time": "02:45",
+    "arrival_time": "07:35",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 906",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "02:50",
+    "arrival_time": "04:55",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "LH 601",
+    "source": "FRA",
+    "destination": "JFK",
+    "departure_time": "02:55",
+    "arrival_time": "10:55",
+    "airline": "Lufthansa",
+    "Aircraft": "Boeing 747-8"
+  },
+  {
+    "code": "6E 608",
+    "source": "HYD",
+    "destination": "MAA",
+    "departure_time": "03:00",
+    "arrival_time": "04:10",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AA 203",
+    "source": "LAX",
+    "destination": "JFK",
+    "departure_time": "03:05",
+    "arrival_time": "12:15",
+    "airline": "American Airlines",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "6E 609",
+    "source": "MAA",
+    "destination": "HYD",
+    "departure_time": "03:10",
+    "arrival_time": "04:20",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 306",
+    "source": "DXB",
+    "destination": "LHR",
+    "departure_time": "03:15",
+    "arrival_time": "07:30",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 505",
+    "source": "DOH",
+    "destination": "AMD",
+    "departure_time": "03:20",
+    "arrival_time": "07:10",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 907",
+    "source": "BOM",
+    "destination": "BLR",
+    "departure_time": "03:25",
+    "arrival_time": "05:15",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 610",
+    "source": "BLR",
+    "destination": "BOM",
+    "departure_time": "03:30",
+    "arrival_time": "05:20",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "BA 102",
+    "source": "LHR",
+    "destination": "SYD",
+    "departure_time": "03:35",
+    "arrival_time": "02:55",
+    "airline": "British Airways",
+    "Aircraft": "Boeing 787 Dreamliner"
+  },
+  {
+    "code": "6E 611",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "03:40",
+    "arrival_time": "05:35",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AI 908",
+    "source": "BLR",
+    "destination": "BOM",
+    "departure_time": "03:45",
+    "arrival_time": "05:35",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 307",
+    "source": "DXB",
+    "destination": "COK",
+    "departure_time": "03:50",
+    "arrival_time": "09:00",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 506",
+    "source": "DOH",
+    "destination": "PNQ",
+    "departure_time": "03:55",
+    "arrival_time": "08:15",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "6E 612",
+    "source": "HYD",
+    "destination": "DEL",
+    "departure_time": "04:00",
+    "arrival_time": "06:10",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "AI 909",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "04:05",
+    "arrival_time": "06:00",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "AA 204",
+    "source": "JFK",
+    "destination": "ORD",
+    "departure_time": "04:10",
+    "arrival_time": "06:40",
+    "airline": "American Airlines",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 613",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "04:15",
+    "arrival_time": "06:20",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 308",
+    "source": "DXB",
+    "destination": "MAA",
+    "departure_time": "04:20",
+    "arrival_time": "09:50",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 507",
+    "source": "DOH",
+    "destination": "CCU",
+    "departure_time": "04:25",
+    "arrival_time": "11:10",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 910",
+    "source": "MAA",
+    "destination": "HYD",
+    "departure_time": "04:30",
+    "arrival_time": "05:40",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "VS 502",
+    "source": "JFK",
+    "destination": "LHR",
+    "departure_time": "04:35",
+    "arrival_time": "12:50",
+    "airline": "Virgin Atlantic",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "6E 614",
+    "source": "DEL",
+    "destination": "HYD",
+    "departure_time": "04:40",
+    "arrival_time": "06:50",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 309",
+    "source": "DXB",
+    "destination": "BLR",
+    "departure_time": "04:45",
+    "arrival_time": "08:15",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 508",
+    "source": "DOH",
+    "destination": "COK",
+    "departure_time": "04:50",
+    "arrival_time": "10:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 911",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "04:55",
+    "arrival_time": "06:50",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 615",
+    "source": "HYD",
+    "destination": "BOM",
+    "departure_time": "05:00",
+    "arrival_time": "06:25",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 310",
+    "source": "DXB",
+    "destination": "AMD",
+    "departure_time": "05:05",
+    "arrival_time": "08:10",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 509",
+    "source": "DOH",
+    "destination": "LHR",
+    "departure_time": "05:10",
+    "arrival_time": "12:25",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 912",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "05:15",
+    "arrival_time": "07:20",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 616",
+    "source": "MAA",
+    "destination": "BOM",
+    "departure_time": "05:20",
+    "arrival_time": "07:25",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 311",
+    "source": "DXB",
+    "destination": "JFK",
+    "departure_time": "05:25",
+    "arrival_time": "12:15",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 510",
+    "source": "DOH",
+    "destination": "AMS",
+    "departure_time": "05:30",
+    "arrival_time": "12:45",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 913",
+    "source": "DEL",
+    "destination": "PNQ",
+    "departure_time": "05:35",
+    "arrival_time": "07:30",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 617",
+    "source": "DEL",
+    "destination": "HYD",
+    "departure_time": "05:40",
+    "arrival_time": "07:50",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 312",
+    "source": "DXB",
+    "destination": "KUL",
+    "departure_time": "05:45",
+    "arrival_time": "17:15",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 511",
+    "source": "DOH",
+    "destination": "BKK",
+    "departure_time": "05:50",
+    "arrival_time": "12:40",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 914",
+    "source": "PNQ",
+    "destination": "DEL",
+    "departure_time": "05:55",
+    "arrival_time": "07:50",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 618",
+    "source": "BLR",
+    "destination": "BOM",
+    "departure_time": "06:00",
+    "arrival_time": "07:50",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 313",
+    "source": "DXB",
+    "destination": "CCU",
+    "departure_time": "06:05",
+    "arrival_time": "11:35",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 512",
+    "source": "DOH",
+    "destination": "AMD",
+    "departure_time": "06:10",
+    "arrival_time": "10:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 915",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "06:15",
+    "arrival_time": "08:10",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 619",
+    "source": "MAA",
+    "destination": "DEL",
+    "departure_time": "06:20",
+    "arrival_time": "09:00",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 314",
+    "source": "DXB",
+    "destination": "HYD",
+    "departure_time": "06:25",
+    "arrival_time": "09:40",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 513",
+    "source": "DOH",
+    "destination": "COK",
+    "departure_time": "06:30",
+    "arrival_time": "11:40",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 916",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "06:35",
+    "arrival_time": "08:40",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 620",
+    "source": "HYD",
+    "destination": "BOM",
+    "departure_time": "06:40",
+    "arrival_time": "08:05",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "EK 315",
+    "source": "DXB",
+    "destination": "MAA",
+    "departure_time": "06:45",
+    "arrival_time": "12:15",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 514",
+    "source": "DOH",
+    "destination": "BLR",
+    "departure_time": "06:50",
+    "arrival_time": "11:40",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 917",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "06:55",
+    "arrival_time": "09:00",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 621",
+    "source": "BOM",
+    "destination": "MAA",
+    "departure_time": "07:00",
+    "arrival_time": "09:05",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 316",
+    "source": "DXB",
+    "destination": "BLR",
+    "departure_time": "07:05",
+    "arrival_time": "10:35",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 515",
+    "source": "DOH",
+    "destination": "DEL",
+    "departure_time": "07:10",
+    "arrival_time": "12:35",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 918",
+    "source": "DEL",
+    "destination": "HYD",
+    "departure_time": "07:15",
+    "arrival_time": "09:25",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 622",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "07:20",
+    "arrival_time": "09:15",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 317",
+    "source": "DXB",
+    "destination": "AMD",
+    "departure_time": "07:25",
+    "arrival_time": "10:30",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 516",
+    "source": "DOH",
+    "destination": "CCU",
+    "departure_time": "07:30",
+    "arrival_time": "14:15",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 919",
+    "source": "HYD",
+    "destination": "DEL",
+    "departure_time": "07:35",
+    "arrival_time": "09:45",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 623",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "07:40",
+    "arrival_time": "09:45",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 318",
+    "source": "DXB",
+    "destination": "COK",
+    "departure_time": "07:45",
+    "arrival_time": "12:55",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 517",
+    "source": "DOH",
+    "destination": "PNQ",
+    "departure_time": "07:50",
+    "arrival_time": "12:10",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 920",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "07:55",
+    "arrival_time": "09:50",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 624",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "08:00",
+    "arrival_time": "09:25",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "EK 319",
+    "source": "DXB",
+    "destination": "MAA",
+    "departure_time": "08:05",
+    "arrival_time": "13:35",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 518",
+    "source": "DOH",
+    "destination": "BOM",
+    "departure_time": "08:10",
+    "arrival_time": "13:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 921",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "08:15",
+    "arrival_time": "10:20",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 625",
+    "source": "DEL",
+    "destination": "MAA",
+    "departure_time": "08:20",
+    "arrival_time": "11:00",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 320",
+    "source": "DXB",
+    "destination": "BLR",
+    "departure_time": "08:25",
+    "arrival_time": "11:55",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 519",
+    "source": "DOH",
+    "destination": "MAA",
+    "departure_time": "08:30",
+    "arrival_time": "13:15",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 922",
+    "source": "HYD",
+    "destination": "BOM",
+    "departure_time": "08:35",
+    "arrival_time": "10:00",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 626",
+    "source": "MAA",
+    "destination": "DEL",
+    "departure_time": "08:40",
+    "arrival_time": "11:20",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 321",
+    "source": "DXB",
+    "destination": "JFK",
+    "departure_time": "08:45",
+    "arrival_time": "15:35",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 520",
+    "source": "DOH",
+    "destination": "LHR",
+    "departure_time": "08:50",
+    "arrival_time": "15:05",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 923",
+    "source": "BOM",
+    "destination": "CCU",
+    "departure_time": "08:55",
+    "arrival_time": "11:15",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 627",
+    "source": "CCU",
+    "destination": "BOM",
+    "departure_time": "09:00",
+    "arrival_time": "11:20",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 322",
+    "source": "DXB",
+    "destination": "AMS",
+    "departure_time": "09:05",
+    "arrival_time": "14:20",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 521",
+    "source": "DOH",
+    "destination": "FRA",
+    "departure_time": "09:10",
+    "arrival_time": "16:15",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 924",
+    "source": "CCU",
+    "destination": "BOM",
+    "departure_time": "09:15",
+    "arrival_time": "11:35",
+    "airline": "Air India",
+    "Aircraft": "Airbus A319"
+  },
+  {
+    "code": "6E 628",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "09:20",
+    "arrival_time": "11:15",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 323",
+    "source": "DXB",
+    "destination": "LHR",
+    "departure_time": "09:25",
+    "arrival_time": "13:40",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 522",
+    "source": "DOH",
+    "destination": "JFK",
+    "departure_time": "09:30",
+    "arrival_time": "17:30",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 925",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "09:35",
+    "arrival_time": "11:40",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 629",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "09:40",
+    "arrival_time": "11:05",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "EK 324",
+    "source": "DXB",
+    "destination": "IST",
+    "departure_time": "09:45",
+    "arrival_time": "14:50",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 523",
+    "source": "DOH",
+    "destination": "CDG",
+    "departure_time": "09:50",
+    "arrival_time": "17:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 926",
+    "source": "HYD",
+    "destination": "BLR",
+    "departure_time": "09:55",
+    "arrival_time": "11:05",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 630",
+    "source": "BLR",
+    "destination": "DEL",
+    "departure_time": "10:00",
+    "arrival_time": "12:40",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 325",
+    "source": "DXB",
+    "destination": "JED",
+    "departure_time": "10:05",
+    "arrival_time": "12:45",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 524",
+    "source": "DOH",
+    "destination": "ATH",
+    "departure_time": "10:10",
+    "arrival_time": "17:30",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 927",
+    "source": "DEL",
+    "destination": "MAA",
+    "departure_time": "10:15",
+    "arrival_time": "12:55",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 631",
+    "source": "MAA",
+    "destination": "DEL",
+    "departure_time": "10:20",
+    "arrival_time": "13:00",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 326",
+    "source": "DXB",
+    "destination": "CPH",
+    "departure_time": "10:25",
+    "arrival_time": "15:20",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "QR 525",
+    "source": "DOH",
+    "destination": "MAD",
+    "departure_time": "10:30",
+    "arrival_time": "18:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 928",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "10:35",
+    "arrival_time": "11:55",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 632",
+    "source": "HYD",
+    "destination": "BOM",
+    "departure_time": "10:40",
+    "arrival_time": "12:05",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "EK 327",
+    "source": "DXB",
+    "destination": "ZRH",
+    "departure_time": "10:45",
+    "arrival_time": "16:00",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 526",
+    "source": "DOH",
+    "destination": "LAX",
+    "departure_time": "10:50",
+    "arrival_time": "00:50",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 929",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "10:55",
+    "arrival_time": "12:50",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 633",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "11:00",
+    "arrival_time": "13:05",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 328",
+    "source": "DXB",
+    "destination": "LHR",
+    "departure_time": "11:05",
+    "arrival_time": "15:20",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 527",
+    "source": "DOH",
+    "destination": "KUL",
+    "departure_time": "11:10",
+    "arrival_time": "22:40",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 930",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "11:15",
+    "arrival_time": "13:10",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 634",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "11:20",
+    "arrival_time": "12:45",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 329",
+    "source": "DXB",
+    "destination": "ORD",
+    "departure_time": "11:25",
+    "arrival_time": "20:00",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 528",
+    "source": "DOH",
+    "destination": "DUB",
+    "departure_time": "11:30",
+    "arrival_time": "18:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 931",
+    "source": "BOM",
+    "destination": "BLR",
+    "departure_time": "11:35",
+    "arrival_time": "13:25",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 635",
+    "source": "HYD",
+    "destination": "BOM",
+    "departure_time": "11:40",
+    "arrival_time": "13:05",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "EK 330",
+    "source": "DXB",
+    "destination": "SYD",
+    "departure_time": "11:45",
+    "arrival_time": "08:45",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "AI 932",
+    "source": "BLR",
+    "destination": "BOM",
+    "departure_time": "11:55",
+    "arrival_time": "13:45",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 636",
+    "source": "DEL",
+    "destination": "CCU",
+    "departure_time": "12:00",
+    "arrival_time": "14:10",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 331",
+    "source": "DXB",
+    "destination": "FCO",
+    "departure_time": "12:05",
+    "arrival_time": "16:25",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 530",
+    "source": "DOH",
+    "destination": "ATL",
+    "departure_time": "12:10",
+    "arrival_time": "20:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 933",
+    "source": "CCU",
+    "destination": "DEL",
+    "departure_time": "12:15",
+    "arrival_time": "14:25",
+    "airline": "Air India",
+    "Aircraft": "Airbus A319"
+  },
+  {
+    "code": "6E 637",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "12:20",
+    "arrival_time": "14:25",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 332",
+    "source": "DXB",
+    "destination": "BKK",
+    "departure_time": "12:25",
+    "arrival_time": "17:15",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 531",
+    "source": "DOH",
+    "destination": "MEX",
+    "departure_time": "12:30",
+    "arrival_time": "22:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 934",
+    "source": "DEL",
+    "destination": "HYD",
+    "departure_time": "12:35",
+    "arrival_time": "14:45",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 638",
+    "source": "HYD",
+    "destination": "DEL",
+    "departure_time": "12:40",
+    "arrival_time": "14:50",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 333",
+    "source": "DXB",
+    "destination": "JED",
+    "departure_time": "12:45",
+    "arrival_time": "15:25",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 532",
+    "source": "DOH",
+    "destination": "EZE",
+    "departure_time": "12:50",
+    "arrival_time": "00:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 935",
+    "source": "BOM",
+    "destination": "MAA",
+    "departure_time": "12:55",
+    "arrival_time": "15:00",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 639",
+    "source": "MAA",
+    "destination": "BOM",
+    "departure_time": "13:00",
+    "arrival_time": "15:05",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 334",
+    "source": "DXB",
+    "destination": "MAN",
+    "departure_time": "13:05",
+    "arrival_time": "18:00",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 533",
+    "source": "DOH",
+    "destination": "CPT",
+    "departure_time": "13:10",
+    "arrival_time": "21:10",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 936",
+    "source": "MAA",
+    "destination": "BOM",
+    "departure_time": "13:15",
+    "arrival_time": "15:20",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 640",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "13:20",
+    "arrival_time": "15:15",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 335",
+    "source": "DXB",
+    "destination": "LHR",
+    "departure_time": "13:25",
+    "arrival_time": "17:40",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 534",
+    "source": "DOH",
+    "destination": "LIS",
+    "departure_time": "13:30",
+    "arrival_time": "20:30",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 937",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "13:35",
+    "arrival_time": "15:40",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 641",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "13:40",
+    "arrival_time": "15:05",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "EK 336",
+    "source": "DXB",
+    "destination": "CDG",
+    "departure_time": "13:45",
+    "arrival_time": "18:00",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 535",
+    "source": "DOH",
+    "destination": "DUB",
+    "departure_time": "13:50",
+    "arrival_time": "20:20",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 938",
+    "source": "HYD",
+    "destination": "DEL",
+    "departure_time": "13:55",
+    "arrival_time": "16:05",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 642",
+    "source": "HYD",
+    "destination": "BOM",
+    "departure_time": "14:00",
+    "arrival_time": "15:25",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "EK 337",
+    "source": "DXB",
+    "destination": "LAX",
+    "departure_time": "14:05",
+    "arrival_time": "17:05",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 536",
+    "source": "DOH",
+    "destination": "CMN",
+    "departure_time": "14:10",
+    "arrival_time": "22:40",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 939",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "14:15",
+    "arrival_time": "16:10",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 643",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "14:20",
+    "arrival_time": "16:25",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 338",
+    "source": "DXB",
+    "destination": "BKK",
+    "departure_time": "14:25",
+    "arrival_time": "19:15",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 537",
+    "source": "DOH",
+    "destination": "YUL",
+    "departure_time": "14:30",
+    "arrival_time": "22:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 940",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "14:35",
+    "arrival_time": "16:30",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 644",
+    "source": "DEL",
+    "destination": "HYD",
+    "departure_time": "14:40",
+    "arrival_time": "16:50",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 339",
+    "source": "DXB",
+    "destination": "SIN",
+    "departure_time": "14:45",
+    "arrival_time": "22:50",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 538",
+    "source": "DOH",
+    "destination": "VIE",
+    "departure_time": "14:50",
+    "arrival_time": "20:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 941",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "14:55",
+    "arrival_time": "17:00",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 645",
+    "source": "BOM",
+    "destination": "MAA",
+    "departure_time": "15:00",
+    "arrival_time": "17:05",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 340",
+    "source": "DXB",
+    "destination": "GRU",
+    "departure_time": "15:05",
+    "arrival_time": "23:00",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 539",
+    "source": "DOH",
+    "destination": "BKK",
+    "departure_time": "15:10",
+    "arrival_time": "22:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 942",
+    "source": "HYD",
+    "destination": "BOM",
+    "departure_time": "15:15",
+    "arrival_time": "16:40",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 646",
+    "source": "MAA",
+    "destination": "BOM",
+    "departure_time": "15:20",
+    "arrival_time": "17:25",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 341",
+    "source": "DXB",
+    "destination": "FRA",
+    "departure_time": "15:25",
+    "arrival_time": "20:45",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 540",
+    "source": "DOH",
+    "destination": "ZRH",
+    "departure_time": "15:30",
+    "arrival_time": "20:50",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 943",
+    "source": "DEL",
+    "destination": "BLR",
+    "departure_time": "15:35",
+    "arrival_time": "18:15",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 647",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "15:40",
+    "arrival_time": "17:35",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 342",
+    "source": "DXB",
+    "destination": "LHR",
+    "departure_time": "15:45",
+    "arrival_time": "20:00",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 541",
+    "source": "DOH",
+    "destination": "DUB",
+    "departure_time": "15:50",
+    "arrival_time": "22:20",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 944",
+    "source": "BLR",
+    "destination": "DEL",
+    "departure_time": "15:55",
+    "arrival_time": "18:35",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 648",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "16:00",
+    "arrival_time": "17:25",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "EK 343",
+    "source": "DXB",
+    "destination": "KUL",
+    "departure_time": "16:05",
+    "arrival_time": "03:35",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 542",
+    "source": "DOH",
+    "destination": "MAN",
+    "departure_time": "16:10",
+    "arrival_time": "23:25",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 945",
+    "source": "HYD",
+    "destination": "BOM",
+    "departure_time": "16:15",
+    "arrival_time": "17:40",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 649",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "16:20",
+    "arrival_time": "18:25",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 344",
+    "source": "DXB",
+    "destination": "JFK",
+    "departure_time": "16:25",
+    "arrival_time": "23:15",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 543",
+    "source": "DOH",
+    "destination": "OSL",
+    "departure_time": "16:30",
+    "arrival_time": "23:50",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 946",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "16:35",
+    "arrival_time": "18:30",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 650",
+    "source": "DEL",
+    "destination": "HYD",
+    "departure_time": "16:40",
+    "arrival_time": "18:50",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 345",
+    "source": "DXB",
+    "destination": "CGN",
+    "departure_time": "16:45",
+    "arrival_time": "21:30",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 544",
+    "source": "DOH",
+    "destination": "CAI",
+    "departure_time": "16:50",
+    "arrival_time": "20:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A319"
+  },
+  {
+    "code": "AI 947",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "16:55",
+    "arrival_time": "19:00",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 651",
+    "source": "HYD",
+    "destination": "BOM",
+    "departure_time": "17:00",
+    "arrival_time": "18:25",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "EK 346",
+    "source": "DXB",
+    "destination": "VIE",
+    "departure_time": "17:05",
+    "arrival_time": "22:20",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 545",
+    "source": "DOH",
+    "destination": "NBO",
+    "departure_time": "17:10",
+    "arrival_time": "22:15",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 948",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "17:15",
+    "arrival_time": "19:10",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 652",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "17:20",
+    "arrival_time": "19:25",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 347",
+    "source": "DXB",
+    "destination": "ZRH",
+    "departure_time": "17:25",
+    "arrival_time": "22:40",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 546",
+    "source": "DOH",
+    "destination": "BKK",
+    "departure_time": "17:30",
+    "arrival_time": "00:20",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 949",
+    "source": "DEL",
+    "destination": "MAA",
+    "departure_time": "17:35",
+    "arrival_time": "20:15",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 653",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "17:40",
+    "arrival_time": "19:35",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 348",
+    "source": "DXB",
+    "destination": "IST",
+    "departure_time": "17:45",
+    "arrival_time": "22:50",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "AI 950",
+    "source": "MAA",
+    "destination": "DEL",
+    "departure_time": "17:55",
+    "arrival_time": "20:35",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 654",
+    "source": "BOM",
+    "destination": "BLR",
+    "departure_time": "18:00",
+    "arrival_time": "19:50",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 349",
+    "source": "DXB",
+    "destination": "ORD",
+    "departure_time": "18:05",
+    "arrival_time": "02:40",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 548",
+    "source": "DOH",
+    "destination": "ATL",
+    "departure_time": "18:10",
+    "arrival_time": "02:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 951",
+    "source": "BLR",
+    "destination": "BOM",
+    "departure_time": "18:15",
+    "arrival_time": "20:05",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 655",
+    "source": "HYD",
+    "destination": "BOM",
+    "departure_time": "18:20",
+    "arrival_time": "19:45",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "EK 350",
+    "source": "DXB",
+    "destination": "GRU",
+    "departure_time": "18:25",
+    "arrival_time": "02:20",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 549",
+    "source": "DOH",
+    "destination": "CDG",
+    "departure_time": "18:30",
+    "arrival_time": "01:40",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 952",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "18:35",
+    "arrival_time": "20:00",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 656",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "18:40",
+    "arrival_time": "20:45",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 351",
+    "source": "DXB",
+    "destination": "FCO",
+    "departure_time": "18:45",
+    "arrival_time": "22:50",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 550",
+    "source": "DOH",
+    "destination": "EZE",
+    "departure_time": "18:50",
+    "arrival_time": "06:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 953",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "18:55",
+    "arrival_time": "20:50",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 657",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "19:00",
+    "arrival_time": "20:55",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 352",
+    "source": "DXB",
+    "destination": "MAN",
+    "departure_time": "19:05",
+    "arrival_time": "23:50",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 551",
+    "source": "DOH",
+    "destination": "LIS",
+    "departure_time": "19:10",
+    "arrival_time": "02:10",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 954",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "19:15",
+    "arrival_time": "21:20",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 658",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "19:20",
+    "arrival_time": "20:45",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "EK 353",
+    "source": "DXB",
+    "destination": "LAX",
+    "departure_time": "19:25",
+    "arrival_time": "22:25",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 552",
+    "source": "DOH",
+    "destination": "YUL",
+    "departure_time": "19:30",
+    "arrival_time": "03:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 955",
+    "source": "HYD",
+    "destination": "BOM",
+    "departure_time": "19:35",
+    "arrival_time": "21:00",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 659",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "19:40",
+    "arrival_time": "21:35",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 354",
+    "source": "DXB",
+    "destination": "SIN",
+    "departure_time": "19:45",
+    "arrival_time": "03:50",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 553",
+    "source": "DOH",
+    "destination": "VIE",
+    "departure_time": "19:50",
+    "arrival_time": "01:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 956",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "19:55",
+    "arrival_time": "22:00",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 660",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "20:00",
+    "arrival_time": "21:25",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "EK 355",
+    "source": "DXB",
+    "destination": "GRU",
+    "departure_time": "20:05",
+    "arrival_time": "04:00",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 554",
+    "source": "DOH",
+    "destination": "ZRH",
+    "departure_time": "20:10",
+    "arrival_time": "01:30",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 957",
+    "source": "DEL",
+    "destination": "HYD",
+    "departure_time": "20:15",
+    "arrival_time": "22:25",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 661",
+    "source": "DEL",
+    "destination": "MAA",
+    "departure_time": "20:20",
+    "arrival_time": "23:00",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 356",
+    "source": "DXB",
+    "destination": "FRA",
+    "departure_time": "20:25",
+    "arrival_time": "01:45",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 555",
+    "source": "DOH",
+    "destination": "NBO",
+    "departure_time": "20:30",
+    "arrival_time": "01:35",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 958",
+    "source": "HYD",
+    "destination": "DEL",
+    "departure_time": "20:35",
+    "arrival_time": "22:45",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 662",
+    "source": "MAA",
+    "destination": "DEL",
+    "departure_time": "20:40",
+    "arrival_time": "23:20",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 357",
+    "source": "DXB",
+    "destination": "CGN",
+    "departure_time": "20:45",
+    "arrival_time": "01:30",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 556",
+    "source": "DOH",
+    "destination": "CMN",
+    "departure_time": "20:50",
+    "arrival_time": "05:20",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 959",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "20:55",
+    "arrival_time": "23:00",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 663",
+    "source": "BLR",
+    "destination": "BOM",
+    "departure_time": "21:00",
+    "arrival_time": "22:50",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 358",
+    "source": "DXB",
+    "destination": "VIE",
+    "departure_time": "21:05",
+    "arrival_time": "02:20",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 557",
+    "source": "DOH",
+    "destination": "LIS",
+    "departure_time": "21:10",
+    "arrival_time": "04:10",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 960",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "21:15",
+    "arrival_time": "23:10",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 664",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "21:20",
+    "arrival_time": "23:25",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 359",
+    "source": "DXB",
+    "destination": "ZRH",
+    "departure_time": "21:25",
+    "arrival_time": "02:40",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 558",
+    "source": "DOH",
+    "destination": "MAD",
+    "departure_time": "21:30",
+    "arrival_time": "05:00",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 961",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "21:35",
+    "arrival_time": "23:00",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 665",
+    "source": "HYD",
+    "destination": "DEL",
+    "departure_time": "21:40",
+    "arrival_time": "23:50",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 360",
+    "source": "DXB",
+    "destination": "IST",
+    "departure_time": "21:45",
+    "arrival_time": "02:50",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 559",
+    "source": "DOH",
+    "destination": "BKK",
+    "departure_time": "21:50",
+    "arrival_time": "04:40",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 962",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "21:55",
+    "arrival_time": "23:50",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 666",
+    "source": "BOM",
+    "destination": "HYD",
+    "departure_time": "22:00",
+    "arrival_time": "23:25",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 MAX 8"
+  },
+  {
+    "code": "EK 361",
+    "source": "DXB",
+    "destination": "JED",
+    "departure_time": "22:05",
+    "arrival_time": "00:45",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 560",
+    "source": "DOH",
+    "destination": "CCU",
+    "departure_time": "22:10",
+    "arrival_time": "04:55",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 963",
+    "source": "DEL",
+    "destination": "CCU",
+    "departure_time": "22:15",
+    "arrival_time": "00:25",
+    "airline": "Air India",
+    "Aircraft": "Airbus A319"
+  },
+  {
+    "code": "6E 667",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "22:20",
+    "arrival_time": "00:25",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 362",
+    "source": "DXB",
+    "destination": "FCO",
+    "departure_time": "22:25",
+    "arrival_time": "02:45",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 561",
+    "source": "DOH",
+    "destination": "SYD",
+    "departure_time": "22:30",
+    "arrival_time": "19:30",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 964",
+    "source": "CCU",
+    "destination": "DEL",
+    "departure_time": "22:35",
+    "arrival_time": "00:45",
+    "airline": "Air India",
+    "Aircraft": "Airbus A319"
+  },
+  {
+    "code": "6E 668",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "22:40",
+    "arrival_time": "00:35",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 363",
+    "source": "DXB",
+    "destination": "JFK",
+    "departure_time": "22:45",
+    "arrival_time": "05:35",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 562",
+    "source": "DOH",
+    "destination": "AKL",
+    "departure_time": "22:50",
+    "arrival_time": "23:50",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 965",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "22:55",
+    "arrival_time": "01:00",
+    "airline": "Air India",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "6E 669",
+    "source": "HYD",
+    "destination": "MAA",
+    "departure_time": "23:00",
+    "arrival_time": "00:10",
+    "airline": "IndiGo",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "EK 364",
+    "source": "DXB",
+    "destination": "LAX",
+    "departure_time": "23:05",
+    "arrival_time": "02:05",
+    "airline": "Emirates",
+    "Aircraft": "Airbus A380"
+  },
+  {
+    "code": "QR 563",
+    "source": "DOH",
+    "destination": "LHR",
+    "departure_time": "23:10",
+    "arrival_time": "06:25",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 966",
+    "source": "MAA",
+    "destination": "HYD",
+    "departure_time": "23:15",
+    "arrival_time": "00:25",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 670",
+    "source": "DEL",
+    "destination": "BOM",
+    "departure_time": "23:20",
+    "arrival_time": "01:15",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 365",
+    "source": "DXB",
+    "destination": "SIN",
+    "departure_time": "23:25",
+    "arrival_time": "07:30",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 564",
+    "source": "DOH",
+    "destination": "CPT",
+    "departure_time": "23:30",
+    "arrival_time": "07:30",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A350 XWB"
+  },
+  {
+    "code": "AI 967",
+    "source": "BOM",
+    "destination": "DEL",
+    "departure_time": "23:35",
+    "arrival_time": "01:40",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  },
+  {
+    "code": "6E 671",
+    "source": "DEL",
+    "destination": "HYD",
+    "departure_time": "23:40",
+    "arrival_time": "01:50",
+    "airline": "IndiGo",
+    "Aircraft": "Boeing 737 NG"
+  },
+  {
+    "code": "EK 366",
+    "source": "DXB",
+    "destination": "JED",
+    "departure_time": "23:45",
+    "arrival_time": "02:25",
+    "airline": "Emirates",
+    "Aircraft": "Boeing 777"
+  },
+  {
+    "code": "QR 565",
+    "source": "DOH",
+    "destination": "BOM",
+    "departure_time": "23:50",
+    "arrival_time": "04:40",
+    "airline": "Qatar Airways",
+    "Aircraft": "Airbus A330"
+  },
+  {
+    "code": "AI 968",
+    "source": "HYD",
+    "destination": "BOM",
+    "departure_time": "23:55",
+    "arrival_time": "01:20",
+    "airline": "Air India",
+    "Aircraft": "Airbus A320neo"
+  }
+]

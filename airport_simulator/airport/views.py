@@ -1,42 +1,107 @@
-from django.shortcuts import render
-from .models import Airport
+import json
 from django.forms.models import model_to_dict
-from django.http import JsonResponse
-from .models import Entity
-from django.shortcuts import render
-from airport.consumer import AirportConsumer
+from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.shortcuts import render
+from django.db.models import Q
 
-# Create your views here.
+from .models import Airport, FlightInstance, AirportEntity, Entity,FlightState
+from airport.consumer import AirportConsumer
+
+def serialize_airport_with_entities(airport):
+
+    airport_data = model_to_dict(airport)
+    terminal_dict = {}
+    
+    terminals = airport.terminals.prefetch_related('airport_entity').all()
+    
+    for terminal in terminals:
+        terminal_data = model_to_dict(terminal)
+        gates = []
+        baggages = []
+        
+        for entity in terminal.airport_entity.all():
+            entity_data = model_to_dict(entity)
+            if entity.entity == Entity.GATE:
+                gates.append(entity_data)
+            else:
+                baggages.append(entity_data)
+        
+        terminal_data['gates'] = gates
+        terminal_data['baggages'] = baggages
+        terminal_dict[str(terminal.id)] = terminal_data # Use str(id) for JSON keys
+        
+    airport_data['terminals'] = terminal_dict
+    return airport_data
 
 def home(request):
-    return render(request,'airport/home.html')
+    return render(request, 'airport/home.html')
+
+def get_flights(request):
+
+    if request.method != 'GET':
+        return JsonResponse({"message": "Only GET requests are valid."}, status=405)
+
+    airport_code = request.GET.get('airport', '')
+    count = int(request.GET.get('count', 15))
+
+    queryset = FlightInstance.objects.all()
+
+    if airport_code:
+        queryset = queryset.filter(Q(source__code=airport_code) | Q(destination__code=airport_code))
+        
+    flights = queryset.exclude(state = FlightState.PENDING).order_by('-departure_time')[:count]
+
+    if not flights.exists():
+        return JsonResponse({"message": "No flights found."}, status=404)
+
+    flights_list = [model_to_dict(flight) for flight in flights]
+    
+    return JsonResponse(flights_list, safe=False)
 
 @csrf_exempt
 def web_socket_notification_reciever(request):
-    message = request.POST.get("message")
-    AirportConsumer().push_notifications(message)
-    return JsonResponse({})
+    
+    if request.method != 'POST':
+        return JsonResponse({"message": "Only POST requests are valid."}, status=405)
 
-def airports(request):
-    t = Airport.objects.all()
-    d = {}
-    for i in t:
-        d[i.code] = model_to_dict(i)
-        terminal_dict = {}
-        for terminal in i.terminals.all():
-            gates = []
-            baggages = []
-            for entity in terminal.airport_entity.all():
-                if entity.entity == Entity.BAGGAGE:
-                    baggages.append(model_to_dict(entity))
-                else:
-                    gates.append(model_to_dict(entity))
-            terminal = model_to_dict(terminal)
-            terminal['gates'] = gates
-            terminal['baggages'] = baggages
-            terminal_dict[terminal['id']] = terminal
-        d[i.code]['terminal'] = terminal_dict
-    print(d)
-    return JsonResponse(d)
+    try:
+        data = json.loads(request.body)
+        message = data.get("message")
+        if message:
+            AirportConsumer().push_notifications(message)
+            return JsonResponse({"message": "Notification received successfully."})
+        else:
+            return JsonResponse({"message": "Message field is missing."}, status=400)
+    except json.JSONDecodeError:
+        return JsonResponse({"message": "Invalid JSON format."}, status=400)
+    except Exception as e:
+        return JsonResponse({"message": f"An error occurred: {str(e)}"}, status=500)
 
+
+def all_airports(request):
+    
+    if request.method != 'GET':
+        return JsonResponse({"message": "Only GET requests are valid."}, status=405)
+    
+    airports = Airport.objects.all()
+    airport_data = {airport.code: airport.name for airport in airports}
+    
+    return JsonResponse(airport_data, safe=False)
+
+def airports_detailed(request):
+    
+    if request.method != 'GET':
+        return JsonResponse({"message": "Only GET requests are valid."}, status=405)
+
+    airports = Airport.objects.prefetch_related('terminals__airport_entity').all()[:2]
+    
+    if not airports.exists():
+        return JsonResponse({"message": "No airports found."}, status=404)
+
+    airport_dict = {
+        airport.code: serialize_airport_with_entities(airport)
+        for airport in airports
+    }
+    
+    return JsonResponse(airport_dict, safe=False)

@@ -78,7 +78,7 @@ class BaggageScheduleService:
                 baggage.save()
                 updated_flights.append(updated_flight)
                 FlightScheduleJob.schedule_baggage_close(flight=updated_flight)
-                KafkaService.produce(message = f"Flight {flight.code} assigned with Baggage {flight.baggage.code} Airport {flight.destination.code} ")
+                KafkaService().produce(message = f"Flight {flight.code} assigned with Baggage {flight.baggage.code} Airport {flight.destination.code} ")
 
 
 

@@ -11,16 +11,16 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='flightinstance',
-            name='id',
-            field=models.AutoField(primary_key=True, serialize=False),
-        ),
-        migrations.AlterField(
-            model_name='flightinstance',
-            name='code',
-            field=models.CharField(),
-        ),
+        # migrations.AddField(
+        #     model_name='flightinstance',
+        #     name='id',
+        #     field=models.AutoField(primary_key=True, serialize=False),
+        # ),
+        # migrations.AlterField(
+        #     model_name='flightinstance',
+        #     name='code',
+        #     field=models.CharField(),
+        # ),
         migrations.CreateModel(
             name='AirportEntityLogging',
             fields=[
