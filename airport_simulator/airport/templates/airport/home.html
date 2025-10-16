@@ -23,19 +23,6 @@
     socket.onclose = function(event) {
         console.log('WebSocket connection closed:', event);
     };
-    fetch("/airports")
-    .then(response => {
-        if(!response.ok){
-            alert("Invalid response");
-            return
-        }
-        return response.json()
-    })
-    .then(data => {
-        console.log(data);
-        t = document.getElementById("airports");
-        t.innerText = data;
-    })
 </script>
 <body>
     Welocome to Airport Simulator

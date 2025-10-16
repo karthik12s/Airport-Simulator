@@ -114,7 +114,7 @@ class FlightScheduleJob:
             cls._scheduler.add_job(
                 cls._trigger_pushback,
                 "date",
-                run_date=datetime.now()+timedelta(seconds=30),
+                run_date=flight.departure_time,
                 args=[flight.id],
                 id=f"pushback_{flight.id}",
                 replace_existing=True,
@@ -126,7 +126,7 @@ class FlightScheduleJob:
         cls._scheduler.add_job(
             cls._trigger_takeoff,
             "date",
-            run_date= datetime.now()+timedelta(seconds=30),
+            run_date= flight.departure_time,
             args=[flight.id],
             id=f"takeoff_{flight.id}",
             replace_existing=True,
