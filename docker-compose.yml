@@ -69,6 +69,7 @@ services:
 
   app:
     build: .
+    image: karthik12s/airport_simulator:latest
     container_name: airport-simulator
     command: python airport_simulator/manage.py runserver 0.0.0.0:8000
     ports:

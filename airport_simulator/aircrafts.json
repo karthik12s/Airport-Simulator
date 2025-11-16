@@ -1,142 +1,37 @@
 [
   {
-    "name": "Airbus A380",
+    "name": "Airbus A380-800",
     "manufacturer": "Airbus",
     "takeoff_distance_metres": 3000,
-    "landing_distance_metres": 2100,
-    "capacity": 525
+    "landing_distance_metres": 2050,
+    "capacity": 555
   },
   {
-    "name": "Boeing 747-8",
+    "name": "Boeing 747-8 Intercontinental",
     "manufacturer": "Boeing",
-    "takeoff_distance_metres": 3015,
-    "landing_distance_metres": 2175,
-    "capacity": 410
+    "takeoff_distance_metres": 3050,
+    "landing_distance_metres": 2130,
+    "capacity": 467
   },
   {
-    "name": "Boeing 747-400",
+    "name": "Boeing 777-300ER",
     "manufacturer": "Boeing",
-    "takeoff_distance_metres": 2815,
-    "landing_distance_metres": 1905,
-    "capacity": 371
+    "takeoff_distance_metres": 3200,
+    "landing_distance_metres": 1800,
+    "capacity": 396
   },
   {
-    "name": "Boeing 737 MAX 8",
-    "manufacturer": "Boeing",
-    "takeoff_distance_metres": 1855,
-    "landing_distance_metres": 720,
-    "capacity": 178
+    "name": "Airbus A350-900",
+    "manufacturer": "Airbus",
+    "takeoff_distance_metres": 2500,
+    "landing_distance_metres": 1700,
+    "capacity": 325
   },
   {
     "name": "Airbus A320neo",
     "manufacturer": "Airbus",
-    "takeoff_distance_metres": 2100,
-    "landing_distance_metres": 1500,
+    "takeoff_distance_metres": 2000,
+    "landing_distance_metres": 1400,
     "capacity": 180
-  },
-  {
-    "name": "Embraer E195-E2",
-    "manufacturer": "Embraer",
-    "takeoff_distance_metres": 1400,
-    "landing_distance_metres": 1000,
-    "capacity": 146
-  },
-  {
-    "name": "Bombardier Q400",
-    "manufacturer": "Bombardier",
-    "takeoff_distance_metres": 1361,
-    "landing_distance_metres": 943,
-    "capacity": 76
-  },
-  {
-    "name": "Cessna SkyCourier",
-    "manufacturer": "Cessna",
-    "takeoff_distance_metres": 1116,
-    "landing_distance_metres": 774,
-    "capacity": 19
-  },
-  {
-    "name": "Boeing 787 Dreamliner",
-    "manufacturer": "Boeing",
-    "takeoff_distance_metres": 2800,
-    "landing_distance_metres": 1700,
-    "capacity": 252
-  },
-  {
-    "name": "Airbus A350 XWB",
-    "manufacturer": "Airbus",
-    "takeoff_distance_metres": 2500,
-    "landing_distance_metres": 1800,
-    "capacity": 314
-  },
-  {
-    "name": "Boeing 777",
-    "manufacturer": "Boeing",
-    "takeoff_distance_metres": 2900,
-    "landing_distance_metres": 1900,
-    "capacity": 358
-  },
-  {
-    "name": "Airbus A330",
-    "manufacturer": "Airbus",
-    "takeoff_distance_metres": 2300,
-    "landing_distance_metres": 1700,
-    "capacity": 271
-  },
-  {
-    "name": "Boeing 767",
-    "manufacturer": "Boeing",
-    "takeoff_distance_metres": 2000,
-    "landing_distance_metres": 1400,
-    "capacity": 218
-  },
-  {
-    "name": "Airbus A319",
-    "manufacturer": "Airbus",
-    "takeoff_distance_metres": 1850,
-    "landing_distance_metres": 1200,
-    "capacity": 144
-  },
-  {
-    "name": "Boeing 737 NG",
-    "manufacturer": "Boeing",
-    "takeoff_distance_metres": 2000,
-    "landing_distance_metres": 1400,
-    "capacity": 162
-  },
-  {
-    "name": "Embraer E175",
-    "manufacturer": "Embraer",
-    "takeoff_distance_metres": 1724,
-    "landing_distance_metres": 1261,
-    "capacity": 76
-  },
-  {
-    "name": "Bombardier CRJ900",
-    "manufacturer": "Bombardier",
-    "takeoff_distance_metres": 1700,
-    "landing_distance_metres": 1200,
-    "capacity": 90
-  },
-  {
-    "name": "ATR 72",
-    "manufacturer": "ATR",
-    "takeoff_distance_metres": 1315,
-    "landing_distance_metres": 1000,
-    "capacity": 72
-  },
-  {
-    "name": "Airbus A220",
-    "manufacturer": "Airbus",
-    "takeoff_distance_metres": 1463,
-    "landing_distance_metres": 1387,
-    "capacity": 135
-  },
-  {
-    "name": "Boeing 757",
-    "manufacturer": "Boeing",
-    "takeoff_distance_metres": 2000,
-    "landing_distance_metres": 1500,
-    "capacity": 239
   }
 ]

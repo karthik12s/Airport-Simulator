@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,5 +28,674 @@
     Welocome to Airport Simulator
 
     <p id="airports"></p>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Simulator</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom font import and application */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+        .airport-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .airport-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .tab-active {
+            border-bottom: 3px solid #0070c9;
+            color: #0070c9;
+            font-weight: 600;
+        }
+        .tab-inactive:hover {
+            color: #3b82f6;
+        }
+        .occupied {
+            background-color: #fee2e2; /* Red-100 */
+            color: #b91c1c; /* Red-700 */
+        }
+        .free {
+            background-color: #d1fae5; /* Green-100 */
+            color: #065f46; /* Green-700 */
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        /* Hide scrollbar for a cleaner carousel look */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+    <div id="app" class="max-w-7xl mx-auto">
+        <!-- Header -->
+        <header class="mb-8 text-center">
+            <h1 class="text-4xl font-extrabold text-blue-900 flex items-center justify-center">
+                <i data-lucide="plane" class="w-8 h-8 mr-3 text-blue-600"></i>
+                Airport Operations Dashboard
+            </h1>
+            <p class="text-gray-500 mt-2">Simulated Home Page for Django App (API Driven)</p>
+        </header>
+
+        <!-- Airport Selection (Carousel) -->
+        <div id="airport-selection" class="bg-white p-6 rounded-xl shadow-lg mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-700">1. Select an Airport (Scroll to view more)</h2>
+            <!-- Carousel Container -->
+            <div id="airport-list" class="flex overflow-x-scroll snap-x snap-mandatory gap-4 pb-4 hide-scrollbar">
+                <!-- Initial Loader -->
+                <div class="flex-shrink-0 w-full flex justify-center items-center py-8">
+                    <div class="loader mr-3"></div>
+                    <span class="text-gray-500">Loading Airports...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Airport Details Section -->
+        <div id="airport-details" class="hidden">
+            <h2 id="details-header" class="text-3xl font-bold text-blue-800 mb-6"></h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                <!-- Flight Manifest (Top 5 Arrivals/Departures) -->
+                <div class="lg:col-span-1 bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700 flex items-center">
+                        <i data-lucide="list-checks" class="w-5 h-5 mr-2 text-green-500"></i>
+                        Top 5 Flight Manifest
+                    </h3>
+                    
+                    <!-- REFACTORED: Dedicated Loading/Initial State Container (Fix 1: Alignment) -->
+                    <div id="manifest-loading-state" class="min-h-32 flex justify-center items-center text-gray-500">
+                        <div class="loader mr-3 hidden" id="manifest-loader"></div>
+                        <span id="manifest-loading-text">Select an airport to see flights.</span>
+                    </div>
+
+                    <!-- Dedicated Content Container -->
+                    <div id="flight-manifest-content" class="space-y-4 hidden">
+                        <!-- Flight cards will be inserted here -->
+                    </div>
+
+                </div>
+
+                <!-- Terminal, Gates & Baggage Information -->
+                <div class="lg:col-span-2 bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700 flex items-center">
+                        <i data-lucide="layout-grid" class="w-5 h-5 mr-2 text-orange-500"></i>
+                        Terminal Operations
+                    </h3>
+
+                    <!-- Terminal Tabs -->
+                    <div id="terminal-tabs" class="flex border-b border-gray-200 mb-4 space-x-4">
+                        <!-- Terminal tabs will be inserted here -->
+                    </div>
+
+                    <!-- Terminal Content -->
+                    <div id="terminal-content">
+                        <div id="terminal-loader" class="min-h-32 flex justify-center items-center text-gray-500 hidden">
+                            <div class="loader mr-3"></div>
+                            <span>Loading Terminal Data...</span>
+                        </div>
+                        <p id="terminal-select-text" class="text-gray-500 italic mb-4">Select a terminal to view gate and baggage status.</p>
+
+                        <!-- Gates Section -->
+                        <div id="gates-section" class="mb-6 hidden">
+                            <h4 class="text-lg font-medium text-gray-600 mb-3 flex items-center">
+                                <i data-lucide="bus-front" class="w-4 h-4 mr-2 text-sky-500"></i>
+                                Gates
+                            </h4>
+                            <div id="gate-list" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                                <!-- Gate cards will be inserted here -->
+                            </div>
+                        </div>
+
+                        <!-- Baggage Claim Section -->
+                        <div id="baggage-section" class="hidden">
+                            <h4 class="text-lg font-medium text-gray-600 mb-3 flex items-center">
+                                <i data-lucide="baggage-claim" class="w-4 h-4 mr-2 text-amber-500"></i>
+                                Baggage Claim
+                            </h4>
+                            <div id="baggage-list" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                                <!-- Baggage cards will be inserted here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Flight History Modal -->
+    <div id="history-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 z-50 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded-xl shadow-2xl max-w-2xl w-full mx-4 relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <h3 class="text-2xl font-bold mb-4 text-blue-800 border-b pb-2">Flight <span id="modal-flight-id"></span> History (Last 10 Days)</h3>
+            
+            <!-- REFACTORED: Dedicated Loading State Container (Fix 2: Persistence) -->
+            <div id="modal-loading-state" class="min-h-32 flex justify-center items-center text-gray-500">
+                <div class="loader mr-3 hidden" id="modal-loader"></div>
+                <span id="modal-loading-text">Loading history...</span>
+            </div>
+            
+            <!-- Dedicated Content Container -->
+            <div id="history-content" class="space-y-3 max-h-96 overflow-y-auto pr-2 hidden">
+                <!-- History content will be placed here -->
+            </div>
+
+            <p id="modal-error" class="text-red-500 hidden mt-4"></p>
+        </div>
+    </div>
+
+    <!-- JavaScript Implementation -->
+    <script>
+        // --- Global State and Mock Data Setup ---
+        let selectedAirportId = null;
+        let selectedTerminalId = 0;
+        
+        // Helper function to generate a random time string
+        const getRandomTime = (offsetMinutes) => {
+            const now = new Date();
+            now.setMinutes(now.getMinutes() + offsetMinutes);
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            return `${hours}:${minutes}`;
+        };
+
+        // --- MOCK API DATA (Simulated Backend Response) ---
+        const MOCK_DATA = {
+            AIRPORTS: [
+                { id: 'JFK', name: 'John F. Kennedy Intl.', city: 'New York' },
+                { id: 'LAX', name: 'Los Angeles Intl.', city: 'Los Angeles' },
+                { id: 'LHR', name: 'Heathrow Airport', city: 'London' },
+                { id: 'DXB', name: 'Dubai Intl.', city: 'Dubai' },
+                { id: 'CDG', name: 'Charles de Gaulle Airport', city: 'Paris' },
+                { id: 'HND', name: 'Haneda Airport', city: 'Tokyo' },
+                { id: 'SIN', name: 'Changi Airport', city: 'Singapore' },
+                { id: 'FRA', name: 'Frankfurt Airport', city: 'Frankfurt' },
+                { id: 'PEK', name: 'Beijing Capital Intl.', city: 'Beijing' },
+                { id: 'SYD', name: 'Sydney Airport', city: 'Sydney' },
+            ],
+            TERMINALS: {
+                'JFK': [
+                    { id: 0, name: 'T0 (Default)', 
+                        gates: [
+                            { id: 'A1', status: 'Occupied', flightId: 'DAL1901', freeAt: getRandomTime(60) },
+                            { id: 'A2', status: 'Free', flightId: null, freeAt: null },
+                            { id: 'A3', status: 'Occupied', flightId: 'SWA450', freeAt: getRandomTime(120) },
+                            { id: 'A4', status: 'Free', flightId: null, freeAt: null },
+                        ],
+                        baggages: [
+                            { id: 1, status: 'Occupied', flightId: 'UAL808', freeAt: getRandomTime(45) },
+                            { id: 2, status: 'Free', flightId: null, freeAt: null },
+                            { id: 3, status: 'Occupied', flightId: 'BAW249', freeAt: getRandomTime(90) },
+                        ]
+                    },
+                    { id: 1, name: 'Terminal 1', 
+                        gates: [
+                            { id: 'B1', status: 'Occupied', flightId: 'QTR909', freeAt: getRandomTime(180) },
+                            { id: 'B2', status: 'Free', flightId: null, freeAt: null },
+                            { id: 'B3', status: 'Occupied', flightId: 'AAL777', freeAt: getRandomTime(30) },
+                        ],
+                        baggages: [
+                            { id: 4, status: 'Free', flightId: null, freeAt: null },
+                            { id: 5, status: 'Occupied', flightId: 'AFR112', freeAt: getRandomTime(75) },
+                        ]
+                    }
+                ],
+                'LAX': [
+                    { id: 0, name: 'T0 (Default)', 
+                        gates: [
+                            { id: 'C1', status: 'Occupied', flightId: 'ASA303', freeAt: getRandomTime(50) },
+                            { id: 'C2', status: 'Free', flightId: null, freeAt: null },
+                        ],
+                        baggages: [
+                            { id: 1, status: 'Free', flightId: null, freeAt: null },
+                        ]
+                    }
+                ],
+                'LHR': [
+                    { id: 0, name: 'T2', gates: [{ id: 'D1', status: 'Occupied', flightId: 'VIR001', freeAt: getRandomTime(40) }], baggages: [{ id: 1, status: 'Occupied', flightId: 'LUF543', freeAt: getRandomTime(55) }] }],
+                'DXB': [{ id: 0, name: 'T3', gates: [{ id: 'E1', status: 'Free', flightId: null, freeAt: null }], baggages: [{ id: 1, status: 'Occupied', flightId: 'EMR345', freeAt: getRandomTime(80) }] }],
+                // Added mock terminal data for new airports
+                'CDG': [{ id: 0, name: 'T1', gates: [{ id: 'F1', status: 'Free', flightId: null, freeAt: null }], baggages: [{ id: 1, status: 'Free', flightId: null, freeAt: null }] }],
+                'HND': [{ id: 0, name: 'T3', gates: [{ id: 'G1', status: 'Occupied', flightId: 'JAL500', freeAt: getRandomTime(50) }], baggages: [{ id: 1, status: 'Occupied', flightId: 'JAL500', freeAt: getRandomTime(40) }] }],
+                'SIN': [{ id: 0, name: 'T4', gates: [{ id: 'K1', status: 'Occupied', flightId: 'SIA111', freeAt: getRandomTime(70) }], baggages: [{ id: 1, status: 'Free', flightId: null, freeAt: null }] }],
+                'FRA': [{ id: 0, name: 'T1', gates: [{ id: 'L1', status: 'Free', flightId: null, freeAt: null }], baggages: [{ id: 1, status: 'Occupied', flightId: 'LUF999', freeAt: getRandomTime(65) }] }],
+                'PEK': [{ id: 0, name: 'T2', gates: [{ id: 'M1', status: 'Occupied', flightId: 'CHA202', freeAt: getRandomTime(90) }], baggages: [{ id: 1, status: 'Free', flightId: null, freeAt: null }] }],
+                'SYD': [{ id: 0, name: 'T1', gates: [{ id: 'N1', status: 'Free', flightId: null, freeAt: null }], baggages: [{ id: 1, status: 'Occupied', flightId: 'QAN333', freeAt: getRandomTime(30) }] }],
+            },
+            FLIGHTS: {
+                'JFK': {
+                    arrivals: [
+                        { id: 'BAW249', type: 'Arrival', origin: 'London LHR', scheduled: getRandomTime(10), actual: getRandomTime(15), status: 'Delayed' },
+                        { id: 'UAL808', type: 'Arrival', origin: 'San Francisco SFO', scheduled: getRandomTime(20), actual: getRandomTime(20), status: 'On Time' },
+                        { id: 'AFR112', type: 'Arrival', origin: 'Paris CDG', scheduled: getRandomTime(30), actual: getRandomTime(40), status: 'Delayed' },
+                        { id: 'LUF456', type: 'Arrival', origin: 'Frankfurt FRA', scheduled: getRandomTime(50), actual: getRandomTime(50), status: 'On Time' },
+                        { id: 'QTR909', type: 'Arrival', origin: 'Doha DOH', scheduled: getRandomTime(60), actual: getRandomTime(58), status: 'Landed' },
+                    ],
+                    departures: [
+                        { id: 'DAL1901', type: 'Departure', destination: 'Miami MIA', scheduled: getRandomTime(10), actual: getRandomTime(5), status: 'On Time' },
+                        { id: 'SWA450', type: 'Departure', destination: 'Chicago ORD', scheduled: getRandomTime(20), actual: getRandomTime(20), status: 'Boarding' },
+                        { id: 'AAL777', type: 'Departure', destination: 'Dallas DFW', scheduled: getRandomTime(30), actual: getRandomTime(35), status: 'Delayed' },
+                        { id: 'VIR001', type: 'Departure', destination: 'London LHR', scheduled: getRandomTime(50), actual: getRandomTime(50), status: 'On Time' },
+                        { id: 'EMR345', type: 'Departure', destination: 'Dubai DXB', scheduled: getRandomTime(60), actual: getRandomTime(60), status: 'On Time' },
+                    ]
+                },
+                'LAX': {
+                    arrivals: [
+                        { id: 'ASA303', type: 'Arrival', origin: 'Seattle SEA', scheduled: getRandomTime(15), actual: getRandomTime(15), status: 'On Time' },
+                        { id: 'JET101', type: 'Arrival', origin: 'Boston BOS', scheduled: getRandomTime(45), actual: getRandomTime(50), status: 'Delayed' },
+                    ],
+                    departures: [
+                        { id: 'UAS202', type: 'Departure', destination: 'Tokyo NRT', scheduled: getRandomTime(25), actual: getRandomTime(25), status: 'On Time' },
+                        { id: 'DAL300', type: 'Departure', destination: 'Atlanta ATL', scheduled: getRandomTime(55), actual: getRandomTime(55), status: 'On Time' },
+                    ]
+                },
+                'LHR': { arrivals: [], departures: [] },
+                'DXB': { arrivals: [], departures: [] },
+                // Added mock flight data for new airports
+                'CDG': { arrivals: [{ id: 'AFR001', type: 'Arrival', origin: 'New York JFK', scheduled: getRandomTime(30), actual: getRandomTime(30), status: 'On Time' }], departures: [] },
+                'HND': { arrivals: [{ id: 'ANA888', type: 'Arrival', origin: 'London LHR', scheduled: getRandomTime(15), actual: getRandomTime(15), status: 'On Time' }], departures: [] },
+                'SIN': { arrivals: [], departures: [{ id: 'SIA111', type: 'Departure', destination: 'Sydney SYD', scheduled: getRandomTime(40), actual: getRandomTime(40), status: 'Boarding' }] },
+                'FRA': { arrivals: [{ id: 'LUF999', type: 'Arrival', origin: 'Chicago ORD', scheduled: getRandomTime(25), actual: getRandomTime(25), status: 'On Time' }], departures: [] },
+                'PEK': { arrivals: [], departures: [{ id: 'CHA202', type: 'Departure', destination: 'London LHR', scheduled: getRandomTime(60), actual: getRandomTime(60), status: 'On Time' }] },
+                'SYD': { arrivals: [{ id: 'QAN333', type: 'Arrival', origin: 'Los Angeles LAX', scheduled: getRandomTime(10), actual: getRandomTime(10), status: 'On Time' }], departures: [] },
+            },
+            HISTORY: {
+                'DAL1901': [
+                    { date: 'Nov 15', arrTime: '08:30', depTime: '08:00', runway: '04R', delay: '0 mins' },
+                    { date: 'Nov 14', arrTime: '08:45', depTime: '08:05', runway: '22L', delay: '5 mins' },
+                    { date: 'Nov 13', arrTime: '08:35', depTime: '07:55', runway: '31C', delay: '-5 mins' },
+                    { date: 'Nov 12', arrTime: '09:00', depTime: '08:15', runway: '04R', delay: '15 mins' },
+                ],
+                'BAW249': [
+                    { date: 'Nov 15', arrTime: '15:10', depTime: '13:00', runway: '31C', delay: '10 mins' },
+                    { date: 'Nov 14', arrTime: '15:05', depTime: '12:55', runway: '04R', delay: '5 mins' },
+                ]
+            }
+        };
+
+        // --- API Simulation Functions ---
+
+        /** Simulates an API call with network delay. */
+        const simulateApiCall = (data, delayMs = 500) => {
+            return new Promise(resolve => {
+                setTimeout(() => resolve(data), delayMs);
+            });
+        };
+
+        /** Simulates fetching the list of all airports. */
+        const fetchAirports = async () => {
+            // Replace with: 
+            const response = await fetch('/all_airports'); return response.json();
+            // return simulateApiCall(MOCK_DATA.AIRPORTS, 800);
+        };
+
+        /** Simulates fetching top 5 arrivals and departures for a specific airport. */
+        const fetchFlightManifest = async (airportId) => {
+            // Replace with: const response = await fetch(`/api/airports/${airportId}/flights/manifest`); return response.json();
+            return simulateApiCall(MOCK_DATA.FLIGHTS[airportId] || { arrivals: [], departures: [] }, 600);
+        };
+
+        /** Simulates fetching terminal structure (gates/baggages) for a specific airport. */
+        const fetchTerminalData = async (airportId) => {
+            // Replace with: 
+            const response = await fetch(`/terminals?airport=${airportId}`); return response.json();
+            // return simulateApiCall(MOCK_DATA.TERMINALS[airportId] || [{ id: 0, name: 'T0', gates: [], baggages: [] }], 700);
+        };
+        
+        /** Simulates fetching 10-day history for a specific flight. */
+        const fetchFlightHistory = async (flightId) => {
+            // Replace with: const response = await fetch(`/api/flights/${flightId}/history`); return response.json();
+            return simulateApiCall(MOCK_DATA.HISTORY[flightId] || [], 900);
+        };
+
+        // --- Rendering Functions ---
+
+        /** Renders the initial list of airport cards as a horizontal carousel. (Now async) */
+        const renderAirports = async () => {
+            const list = document.getElementById('airport-list');
+            // Show the initial loader content for the carousel
+            list.innerHTML = `
+                <div class="flex-shrink-0 w-full flex justify-center items-center py-8">
+                    <div class="loader mr-3"></div>
+                    <span class="text-gray-500">Loading Airports...</span>
+                </div>
+            `;
+            
+            try {
+                // Fetch data asynchronously
+                const airports = await fetchAirports();
+
+                // Render carousel items
+                list.innerHTML = airports.map(airport => `
+                    <button
+                        class="airport-card flex-shrink-0 w-64 md:w-80 snap-start p-4 bg-blue-50 text-blue-800 rounded-lg text-left shadow-md hover:bg-blue-100 transition-all focus:ring-4 focus:ring-blue-300"
+                        onclick="selectAirport('${airport.id}', '${airport.name}')"
+                    >
+                        <div class="font-bold text-xl">${airport.id} - ${airport.city}</div>
+                        <div class="text-sm text-blue-600">${airport.name}</div>
+                    </button>
+                `).join('');
+
+            } catch (error) {
+                console.error("Error fetching airports:", error);
+                list.innerHTML = '<p class="text-red-500 flex-shrink-0 w-full text-center py-8">Failed to load airport data. Please check the backend connection.</p>';
+            }
+            lucide.createIcons();
+        };
+
+        /** Displays the airport details section and renders initial content. (Now async) */
+        const selectAirport = async (id, name) => {
+            selectedAirportId = id;
+            selectedTerminalId = 0; // Default to terminal 0
+            
+            document.getElementById('details-header').textContent = `${name} (${id}) Operations`;
+            document.getElementById('airport-details').classList.remove('hidden');
+
+            // Asynchronously load manifest and terminal info
+            await renderFlightManifest(id);
+            await renderTerminalsTabs(id);
+        };
+
+        /** Renders the top 5 arrival and departure flights. (Now async) */
+        const renderFlightManifest = async (airportId) => {
+            const manifestContentDiv = document.getElementById('flight-manifest-content');
+            const manifestLoadingStateDiv = document.getElementById('manifest-loading-state');
+            const manifestLoader = document.getElementById('manifest-loader');
+            const manifestLoadingText = document.getElementById('manifest-loading-text');
+
+            // 1. Setup loading state (Fix 1: Alignment)
+            manifestContentDiv.classList.add('hidden');
+            manifestContentDiv.innerHTML = ''; // Clear previous content
+            
+            manifestLoadingStateDiv.classList.remove('hidden');
+            // Show loader, update text
+            manifestLoader.classList.remove('hidden');
+            manifestLoadingText.textContent = 'Loading flights...';
+
+            try {
+                const flights = await fetchFlightManifest(airportId);
+
+                const renderFlightList = (type, list) => {
+                    if (list.length === 0) return `<p class="text-gray-500 italic">No ${type} flights scheduled.</p>`;
+
+                    const icon = type === 'Arrivals' ? 'arrow-down-right' : 'arrow-up-right';
+                    const color = type === 'Arrivals' ? 'text-green-600' : 'text-red-600';
+                    const label = type === 'Arrivals' ? 'Origin' : 'Destination';
+
+                    return `
+                        <h4 class="text-lg font-semibold ${color} border-b pb-1 flex items-center mt-3">
+                            <i data-lucide="${icon}" class="w-4 h-4 mr-2"></i> ${type}
+                        </h4>
+                        ${list.map(flight => `
+                            <button
+                                class="w-full text-left p-3 border rounded-lg hover:bg-gray-50 transition-colors"
+                                onclick="showFlightHistory('${flight.id}')"
+                            >
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="font-bold text-gray-800">${flight.id}</span>
+                                    <span class="px-2 py-0.5 text-xs font-medium rounded-full ${flight.status.includes('Delay') || flight.status.includes('Boarding') ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}">${flight.status}</span>
+                                </div>
+                                <div class="text-xs text-gray-500 mt-1">
+                                    <span class="mr-3">${label}: ${flight.origin || flight.destination}</span>
+                                    <span class="mr-3">Scheduled: ${flight.scheduled}</span>
+                                </div>
+                                <div class="text-xs text-blue-600 font-medium mt-1">
+                                    Click for 10-Day History
+                                </div>
+                            </button>
+                        `).join('')}
+                    `;
+                };
+
+                // 2. Hide loading state, show content
+                manifestLoadingStateDiv.classList.add('hidden');
+                manifestContentDiv.classList.remove('hidden');
+
+                // 3. Inject final content
+                manifestContentDiv.innerHTML = `
+                    ${renderFlightList('Arrivals', flights.arrivals)}
+                    ${renderFlightList('Departures', flights.departures)}
+                `;
+
+                if (flights.arrivals.length === 0 && flights.departures.length === 0) {
+                    manifestContentDiv.innerHTML = '<p class="text-gray-500 italic text-center py-8">No flight manifest data available.</p>';
+                }
+
+
+            } catch (error) {
+                // Revert to error state
+                manifestLoadingStateDiv.classList.remove('hidden');
+                manifestContentDiv.classList.add('hidden');
+                manifestLoader.classList.add('hidden'); // Hide loader on error
+                manifestLoadingText.textContent = 'Failed to load flight manifest.';
+                console.error("Error fetching flight manifest:", error);
+            }
+            lucide.createIcons();
+        };
+
+        /** Renders the terminal selection tabs. (Now async) */
+        const renderTerminalsTabs = async (airportId) => {
+            const tabsDiv = document.getElementById('terminal-tabs');
+            const selectText = document.getElementById('terminal-select-text');
+            tabsDiv.innerHTML = ''; // Clear tabs
+            selectText.classList.remove('hidden');
+            selectText.textContent = 'Loading Terminal Data...'; // Use selectText for temporary loading message
+
+            try {
+                var terminals = await fetchTerminalData(airportId);
+                localStorage.setItem('terminals',JSON.stringify(terminals))
+                terminals = terminals[airportId]
+                // Set the default terminal to the first one in the list (T0)
+                selectedTerminalId = terminals.length > 0 ? terminals[0].id : 0;
+
+                tabsDiv.innerHTML = terminals.map(t => `
+                    <button
+                        class="py-2 px-4 text-gray-500 transition-colors whitespace-nowrap ${t.id === selectedTerminalId ? 'tab-active' : 'tab-inactive'}"
+                        onclick="selectTerminal(${t.id},'${airportId}')"
+                    >
+                        ${t.name}
+                    </button>
+                `).join('');
+                
+                if (terminals.length > 0) {
+                    selectText.classList.add('hidden');
+                    // Render the content of the default/selected terminal
+                    renderTerminalContent(terminals);
+                } else {
+                    selectText.textContent = 'No terminal data available for this airport.';
+                    document.getElementById('gates-section').classList.add('hidden');
+                    document.getElementById('baggage-section').classList.add('hidden');
+                }
+
+            } catch (error) {
+                console.error("Error fetching terminal data:", error);
+                selectText.textContent = 'Failed to load terminal structure.';
+            }
+        };
+
+        /** Handles terminal selection and re-renders content. */
+        const selectTerminal = async (terminalId,airportId) => {
+            selectedTerminalId = terminalId;
+            // Re-fetch terminal data to ensure we have the latest list (though mock data is static here)
+            const terminals = JSON.parse(localStorage.getItem("terminals"))[airportId]; 
+            
+            // console.log(terminals,selectedAirportId)
+            // Re-render tabs to highlight new selection
+            const tabsDiv = document.getElementById('terminal-tabs');
+             tabsDiv.innerHTML = terminals.map(t => `
+                <button
+                    class="py-2 px-4 text-gray-500 transition-colors whitespace-nowrap ${t.id === selectedTerminalId ? 'tab-active' : 'tab-inactive'}"
+                    onclick="selectTerminal(${t.id},'${airportId}')"
+                >
+                    ${t.name}
+                </button>
+            `).join('');
+
+            // Re-render terminal content
+            renderTerminalContent(terminals); 
+        };
+
+
+        /** Renders the gates and baggage claims for the selected terminal. */
+        const renderTerminalContent = (terminals) => {
+            const currentTerminal = terminals.find(t => t.id === selectedTerminalId);
+
+            document.getElementById('gates-section').classList.remove('hidden');
+            document.getElementById('baggage-section').classList.remove('hidden');
+
+            if (!currentTerminal) {
+                document.getElementById('gate-list').innerHTML = '<p class="col-span-4 text-gray-500 italic">No data found for this terminal.</p>';
+                document.getElementById('baggage-list').innerHTML = '';
+                return;
+            }
+
+            // Gates Rendering
+            const gateList = document.getElementById('gate-list');
+            gateList.innerHTML = currentTerminal.gates.map(gate => {
+                const isOccupied = gate.status === 'Occupied';
+                const statusClass = isOccupied ? 'occupied' : 'free';
+                const statusText = isOccupied ? `Occupied by: ${gate.flightId}` : 'Available';
+                const timeText = isOccupied ? `Free at: ${gate.freeAt}` : '';
+                const icon = isOccupied ? 'lock' : 'check-circle';
+
+                return `
+                    <div class="p-3 rounded-lg shadow-sm border ${statusClass}">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-bold text-lg">Gate ${gate.id}</span>
+                            <i data-lucide="${icon}" class="w-4 h-4"></i>
+                        </div>
+                        <p class="text-sm">${statusText}</p>
+                        ${isOccupied ? `<p class="text-xs font-medium">${timeText}</p>` : ''}
+                    </div>
+                `;
+            }).join('') || '<p class="col-span-4 text-gray-500 italic">No gate information available for this terminal.</p>';
+
+            // Baggage Rendering
+            const baggageList = document.getElementById('baggage-list');
+            baggageList.innerHTML = currentTerminal.baggages.map(baggage => {
+                const isOccupied = baggage.status === 'Occupied';
+                const statusClass = isOccupied ? 'occupied' : 'free';
+                const statusText = isOccupied ? `Claiming: ${baggage.flightId}` : 'Available';
+                const timeText = isOccupied ? `Clear at: ${baggage.freeAt}` : '';
+                const icon = isOccupied ? 'luggage' : 'tag';
+
+                return `
+                    <div class="p-3 rounded-lg shadow-sm border ${statusClass}">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-bold text-lg">Baggage ${baggage.id}</span>
+                            <i data-lucide="${icon}" class="w-4 h-4"></i>
+                        </div>
+                        <p class="text-sm">${statusText}</p>
+                        ${isOccupied ? `<p class="text-xs font-medium">${timeText}</p>` : ''}
+                    </div>
+                `;
+            }).join('') || '<p class="col-span-4 text-gray-500 italic">No baggage claim information available for this terminal.</p>';
+
+            lucide.createIcons();
+        };
+
+
+        /** Shows the modal with the 10-day history for a flight. (Now async) */
+        const showFlightHistory = async (flightId) => {
+            const modal = document.getElementById('history-modal');
+            const historyContent = document.getElementById('history-content');
+            const loadingState = document.getElementById('modal-loading-state'); // New ID for the loading container
+            const modalFlightId = document.getElementById('modal-flight-id');
+            const modalError = document.getElementById('modal-error');
+            const loader = document.getElementById('modal-loader');
+            const loadingText = document.getElementById('modal-loading-text');
+
+            modalFlightId.textContent = flightId;
+            modalError.classList.add('hidden');
+            
+            // 1. Setup loading state (Fix 2: Persistence)
+            loadingState.classList.remove('hidden'); 
+            historyContent.classList.add('hidden');
+            historyContent.innerHTML = ''; // Safely clear content container
+            loader.classList.remove('hidden');
+            loadingText.textContent = 'Loading history...';
+
+
+            modal.classList.remove('hidden');
+
+            try {
+                const history = await fetchFlightHistory(flightId);
+
+                // 2. Hide loading state, show content
+                loadingState.classList.add('hidden');
+                historyContent.classList.remove('hidden');
+
+                if (history.length === 0) {
+                    historyContent.innerHTML = '<p class="text-gray-500 italic text-center py-4">No history data found for this flight in the last 10 days.</p>';
+                } else {
+                    historyContent.innerHTML = history.map(day => `
+                        <div class="bg-gray-50 p-3 rounded-lg border border-gray-200">
+                            <div class="font-bold text-gray-800">${day.date}</div>
+                            <div class="text-sm text-gray-600 grid grid-cols-2 gap-x-4 gap-y-1 mt-1">
+                                <div><span class="font-medium">Arrival:</span> ${day.arrTime}</div>
+                                <div><span class="font-medium">Departure:</span> ${day.depTime}</div>
+                                <div><span class="font-medium">Runway:</span> ${day.runway}</div>
+                                <div><span class="font-medium">Delay:</span> <span class="${day.delay.includes('-') || day.delay.includes('0') ? 'text-green-600' : 'text-red-600'}">${day.delay}</span></div>
+                            </div>
+                        </div>
+                    `).join('');
+                }
+            } catch (error) {
+                console.error("Error fetching flight history:", error);
+                
+                // Revert to error state
+                loadingState.classList.remove('hidden');
+                historyContent.classList.add('hidden');
+                loader.classList.add('hidden'); // Hide loader on error
+                loadingText.textContent = 'Failed to load flight history.';
+            }
+
+            // Re-initialize icons inside the modal
+            lucide.createIcons();
+        };
+
+        /** Hides the flight history modal. */
+        const closeModal = () => {
+            document.getElementById('history-modal').classList.add('hidden');
+        };
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', () => {
+            renderAirports();
+        });
+
+    </script>
 </body>
 </html>

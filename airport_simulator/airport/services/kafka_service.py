@@ -13,6 +13,8 @@ class KafkaService():
         return cls._instance
     
     def produce(self,message):
+        # requests.post("http://127.0.0.1:8000/web_socket_notification_reciever",data={"message":message})
+        return
         producer = KafkaProducer(bootstrap_servers=[self._port],value_serializer=lambda x: json.dumps(x).encode("utf-8"))
         producer.send(self._topic,message)
     

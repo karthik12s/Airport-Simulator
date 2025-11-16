@@ -86,6 +86,7 @@ class AirportEntity(Model):
     entity = CharField(
         choices=Entity.choices
     )
+    flightId = CharField(default='')
     class Meta:
         constraints = [
             UniqueConstraint(fields = ['terminal','code'],name = "unique_entity")

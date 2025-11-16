@@ -24,6 +24,7 @@ class GateTimeCalculator:
         Updates gate and flight timings when assigned.
         """
         gate.free_at = max(gate.free_at+timedelta(minutes=GateTimeCalculator.DEFAULT_OCCUPANCY),flight.departure_time) 
+        gate.flightId = flight.code
         flight.gate = gate
         flight.departure_time = gate.free_at
         flight.state = "G"

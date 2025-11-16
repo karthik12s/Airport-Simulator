@@ -4,8 +4,9 @@ from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
 from django.db.models import Q
+from django.utils import timezone
 
-from .models import Airport, FlightInstance, AirportEntity, Entity,FlightState
+from .models import Airport, FlightInstance, AirportEntity, Entity,FlightState,Terminal
 from airport.consumer import AirportConsumer
 
 def serialize_airport_with_entities(airport):
@@ -85,9 +86,64 @@ def all_airports(request):
         return JsonResponse({"message": "Only GET requests are valid."}, status=405)
     
     airports = Airport.objects.all()
-    airport_data = {airport.code: airport.name for airport in airports}
-    
+    airport_data = []
+    for  airport in airports:
+        airport_data.append({
+            'id':airport.code,
+            'name':airport.name,
+            'city':''
+        })
     return JsonResponse(airport_data, safe=False)
+
+def terminal_processor(entities):
+    terminals = {}
+
+    for i in entities:
+        airport_code = i.terminal.airport.code
+        terminal_id = i.terminal.id
+        airport_entity = 'gates' if i.entity == Entity.GATE else 'baggages'
+        if airport_code not in terminals:
+            terminals[airport_code] = {}
+        if terminal_id not in terminals[airport_code]:
+            terminals[airport_code][terminal_id] = {"id":terminal_id,"name":i.terminal.code,'gates':[],'baggages':[]}
+        entity_dict = model_to_dict(i)
+        if entity_dict['free_at'] < timezone.now():
+            entity_dict['status'] = 'Free'
+        else:
+            entity_dict['status'] = 'Occupied'
+        terminals[airport_code][terminal_id][airport_entity].append(entity_dict)
+    for i in terminals:
+        d = terminals[i]
+        l = []
+        for j in d:
+            l.append(d[j])
+        terminals[i] = l
+    return terminals
+
+def all_terminals(request):
+
+    if request.method != 'GET':
+        return JsonResponse({"message": "Only GET requests are valid."}, status=405)
+    
+    entities = AirportEntity.objects.all()
+    terminals = terminal_processor(entities)
+    
+
+    return JsonResponse(terminals,safe=False)
+            
+
+def get_terminals(request):
+
+    if request.method != 'GET':
+        return JsonResponse({"message": "Only GET requests are valid."}, status=405)
+    
+    airport_code = request.GET.get('airport', '')
+    entities = AirportEntity.objects.filter(terminal__airport__code = airport_code)
+    terminals = terminal_processor(entities)
+    
+
+    return JsonResponse(terminals,safe=False)
+
 
 def airports_detailed(request):
     

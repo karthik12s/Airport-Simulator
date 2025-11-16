@@ -19,6 +19,7 @@ class BaggageTimeCalculator:
     def assign_baggage_time(baggage, flight, delay=20):
         baggage.free_at = flight.arrival_time + timedelta(minutes=BaggageTimeCalculator.DEFAULT_HANDLING_TIME)
         flight.baggage = baggage
+        baggage.flightId = flight.code
         flight.arrival_time = baggage.free_at
         flight.state = FlightState.BAGGAGE
         return baggage, flight

@@ -1,218 +1,82 @@
 [
   {
-    "code": "A3",
-    "name": "Aegean Airlines"
-  },
-  {
-    "code": "AA",
-    "name": "American Airlines"
-  },
-  {
-    "code": "AAL",
-    "name": "American Airlines"
-  },
-  {
-    "code": "AC",
-    "name": "Air Canada"
-  },
-  {
-    "code": "ACA",
-    "name": "Air Canada"
-  },
-  {
-    "code": "AF",
-    "name": "Air France"
-  },
-  {
-    "code": "AFL",
-    "name": "Aeroflot Russian Int.Airl."
-  },
-  {
-    "code": "AHY",
-    "name": "Azerbaijan Airlines"
-  },
-  {
-    "code": "AI",
-    "name": "Air India"
-  },
-  {
-    "code": "AM",
-    "name": "AeroMexico"
-  },
-  {
-    "code": "ANA",
-    "name": "All Nippon Airways"
-  },
-  {
-    "code": "AR",
-    "name": "Aerolíneas Argentinas"
-  },
-  {
-    "code": "AT",
-    "name": "Royal Air Maroc"
-  },
-  {
-    "code": "AV",
-    "name": "Avianca"
-  },
-  {
-    "code": "AZ",
-    "name": "ITA Airways"
-  },
-  {
-    "code": "BA",
-    "name": "British Airways"
-  },
-  {
-    "code": "BT",
-    "name": "Air Baltic"
-  },
-  {
-    "code": "CA",
-    "name": "Air China"
-  },
-  {
-    "code": "CP",
-    "name": "Cathay Pacific"
-  },
-  {
-    "code": "DL",
-    "name": "Delta Air Lines"
-  },
-  {
-    "code": "DLH",
-    "name": "Lufthansa"
-  },
-  {
     "code": "EK",
     "name": "Emirates"
-  },
-  {
-    "code": "EY",
-    "name": "Etihad Airways"
-  },
-  {
-    "code": "FR",
-    "name": "Ryanair"
-  },
-  {
-    "code": "GF",
-    "name": "Gulf Air"
-  },
-  {
-    "code": "HU",
-    "name": "Hainan Airlines"
-  },
-  {
-    "code": "IB",
-    "name": "Iberia"
-  },
-  {
-    "code": "JL",
-    "name": "Japan Airlines"
-  },
-  {
-    "code": "KLM",
-    "name": "KLM-Royal Dutch Airlines"
-  },
-  {
-    "code": "KE",
-    "name": "Korean Air"
-  },
-  {
-    "code": "LH",
-    "name": "Lufthansa"
-  },
-  {
-    "code": "NH",
-    "name": "All Nippon Airways"
-  },
-  {
-    "code": "NZ",
-    "name": "Air New Zealand"
-  },
-  {
-    "code": "OA",
-    "name": "Oman Air"
-  },
-  {
-    "code": "OS",
-    "name": "Austrian Airlines"
-  },
-  {
-    "code": "OZ",
-    "name": "Asiana Airlines"
-  },
-  {
-    "code": "PR",
-    "name": "Philippine Airlines"
-  },
-  {
-    "code": "QF",
-    "name": "Qantas"
   },
   {
     "code": "QR",
     "name": "Qatar Airways"
   },
   {
-    "code": "SA",
-    "name": "South African Airways"
+    "code": "LH",
+    "name": "Lufthansa"
   },
   {
     "code": "SQ",
     "name": "Singapore Airlines"
   },
   {
-    "code": "SW",
-    "name": "Swiss International Air Lines"
+    "code": "QFA",
+    "name": "Qantas"
   },
   {
-    "code": "TK",
-    "name": "Turkish Airlines"
-  },
-  {
-    "code": "TP",
-    "name": "TAP Air Portugal"
-  },
-  {
-    "code": "UA",
-    "name": "United Airlines"
-  },
-  {
-    "code": "UL",
-    "name": "SriLankan Airlines"
-  },
-  {
-    "code": "VS",
-    "name": "Virgin Atlantic"
-  },
-  {
-    "code": "WS",
-    "name": "WestJet"
+    "code": "AI",
+    "name": "Air India"
   },
   {
     "code": "6E",
     "name": "IndiGo"
   },
   {
-    "code": "I5",
-    "name": "AirAsia India"
+    "code": "BA",
+    "name": "British Airways"
   },
   {
-    "code": "SG",
-    "name": "SpiceJet"
+    "code": "AF",
+    "name": "Air France"
   },
   {
-    "code": "QP",
-    "name": "Akasa Air"
+    "code": "UA",
+    "name": "United Airlines"
   },
   {
-    "code": "IX",
-    "name": "Air India Express"
+    "code": "AA",
+    "name": "American Airlines"
   },
   {
-    "code": "9I",
-    "name": "Alliance Air"
+    "code": "JAL",
+    "name": "Japan Airlines (JAL)"
+  },
+  {
+    "code": "NH",
+    "name": "All Nippon Airways (ANA)"
+  },
+  {
+    "code": "CX",
+    "name": "Cathay Pacific"
+  },
+  {
+    "code": "EY",
+    "name": "Etihad Airways"
+  },
+  {
+    "code": "TK",
+    "name": "Turkish Airlines"
+  },
+  {
+    "code": "UL",
+    "name": "SriLankan Airlines"
+  },
+  {
+    "code": "KL",
+    "name": "KLM Royal Dutch Airlines"
+  },
+  {
+    "code": "SA",
+    "name": "South African Airways"
+  },
+  {
+    "code": "VS",
+    "name": "Virgin Atlantic"
   }
 ]

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-p3mzlv$mbj_1yl53eomp!i9=5vq!d0uh&5vprm)^+)=d^#@)b#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'app']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'app','airport-simulator.onrender.com']
 
 
 # Application definition
@@ -85,14 +85,14 @@ CHANNEL_LAYERS = {
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
+#         'NAME': BASE_DIR / 'db_1.sqlite3',
 #     }
 # }
 
 import dj_database_url
 
 DATABASES = {
-    'default': dj_database_url.parse("postgresql://airport_simulator_user:kMp3bA1IEesAtWu6AAT9XJPtXDe1ZeGU@dpg-d3ln5kemcj7s73a2pb9g-a.singapore-postgres.render.com/airport_simulator")
+    'default': dj_database_url.parse("postgresql://airport:fmTKsGLNhrBdxivtTWsRZtNYdo0bYbEE@dpg-d4c96kodl3ps73bbq65g-a.singapore-postgres.render.com/airport_simulator_x41l")
 }
 
 # Password validation
